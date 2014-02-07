@@ -1,0 +1,17 @@
+@import "normalize-css";
+@import "bourbon/app/assets/stylesheets/bourbon";
+@import "neat";
+@import "breakpoint";
+
+html, body {
+  height: 100%;
+  font-size: 100%
+}
+
+body {
+  font-family: Georgia, serif;
+}
+
+body.index {
+  @include outer-container;
+}
