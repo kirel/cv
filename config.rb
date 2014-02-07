@@ -53,6 +53,8 @@ set :js_dir, 'javascripts'
 
 set :images_dir, 'images'
 
+set :fonts_dir,  "fonts-folder"
+
 ready do
   sprockets.append_path File.join root, 'bower_components'
 end

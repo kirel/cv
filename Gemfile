@@ -9,3 +9,4 @@ gem "middleman-livereload", "~> 3.1.0"
 
 gem 'breakpoint'
 gem 'middleman-gh-pages'
+gem 'font-awesome-middleman'

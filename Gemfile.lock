@@ -23,6 +23,8 @@ GEM
     execjs (1.4.0)
       multi_json (~> 1.0)
     ffi (1.9.3)
+    font-awesome-middleman (4.0.3)
+      middleman (>= 3.0.0)
     fssm (0.2.10)
     haml (4.0.5)
       tilt
@@ -100,6 +102,7 @@ PLATFORMS
 
 DEPENDENCIES
   breakpoint
+  font-awesome-middleman
   middleman (~> 3.2.2)
   middleman-gh-pages
   middleman-livereload (~> 3.1.0)
