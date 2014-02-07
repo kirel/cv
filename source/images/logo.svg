@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="90px" height="251px" viewBox="0 0 90 251" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <title>Kirelabs Logo</title>
+    <description>Created with Sketch (http://www.bohemiancoding.com/sketch)</description>
+    <defs>
+        <filter x="-20%" y="-20%" width="140%" height="140%" filterUnits="objectBoundingBox" id="filter-1">
+            <feMorphology radius="1" in="SourceAlpha" operator="dilate" result="shadowSpreadOuter1"></feMorphology>
+            <feOffset dx="0" dy="0" in="shadowSpreadOuter1" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="0.5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 1   0 0 0 0 0.999936521   0 0 0 0 1  0 0 0 0.7 0" in="shadowBlurOuter1" type="matrix" result="shadowMatrixOuter1"></feColorMatrix>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                <feMergeNode in="SourceGraphic"></feMergeNode>
+            </feMerge>
+        </filter>
+        <filter x="-20%" y="-20%" width="140%" height="140%" filterUnits="objectBoundingBox" id="filter-2">
+            <feMorphology radius="1" in="SourceAlpha" operator="dilate" result="shadowSpreadOuter1"></feMorphology>
+            <feOffset dx="0" dy="0" in="shadowSpreadOuter1" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="0.5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 1   0 0 0 0 0.999936521   0 0 0 0 1  0 0 0 0.7 0" in="shadowBlurOuter1" type="matrix" result="shadowMatrixOuter1"></feColorMatrix>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                <feMergeNode in="SourceGraphic"></feMergeNode>
+            </feMerge>
+        </filter>
+        <filter x="-20%" y="-20%" width="140%" height="140%" filterUnits="objectBoundingBox" id="filter-3">
+            <feMorphology radius="1" in="SourceAlpha" operator="dilate" result="shadowSpreadOuter1"></feMorphology>
+            <feOffset dx="0" dy="0" in="shadowSpreadOuter1" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="0.5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 1   0 0 0 0 0.999936521   0 0 0 0 1  0 0 0 0.7 0" in="shadowBlurOuter1" type="matrix" result="shadowMatrixOuter1"></feColorMatrix>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                <feMergeNode in="SourceGraphic"></feMergeNode>
+            </feMerge>
+        </filter>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <rect id="glass-boundary" fill="#65C8F6" sketch:type="MSShapeGroup" x="7" y="0" width="75" height="251" rx="40"></rect>
+        <rect id="glass-upper" fill="#B0E9FD" sketch:type="MSShapeGroup" x="15" y="10" width="61" height="150"></rect>
+        <path d="M45.5,33 C65.1061096,33 81,26.5081293 81,18.5 C81,10.4918707 65.1061096,4 45.5,4 C25.8938904,4 10,10.4918707 10,18.5 C10,26.5081293 25.8938904,33 45.5,33 Z" id="open-top" fill="#B0E9FD" sketch:type="MSShapeGroup"></path>
+        <path d="M67.1255032,34 L64,34 L64,34 L64,10.1221139 C66.9862005,10.8683072 69.68144,11.7897219 72,12.8513464 L72,32.1486536 C70.521022,32.8258495 68.8887735,33.4459941 67.1255032,34 Z" id="shine-back-upper" opacity="0.75" fill="#FFFFFF" sketch:type="MSShapeGroup"></path>
+        <path d="M46.5,37 C66.1061096,37 82,30.5081293 82,22.5 C82,14.4918707 66.1061096,8 46.5,8 C26.8938904,8 11,14.4918707 11,22.5 C11,30.5081293 26.8938904,37 46.5,37 Z" id="inner-glass" opacity="0.5" fill="#FFFFFF" sketch:type="MSShapeGroup" transform="translate(46.500000, 22.500000) scale(-1, 1) translate(-46.500000, -22.500000) "></path>
+        <path d="M72,78.7489969 L72,33 L16,33 L16,137.996902 L16,212.006195 C16,226.245256 26.6305277,238.001299 40.3936006,239.770036 L40.3936006,239.770036 C30.8657085,236.589496 24,227.597179 24,217.000915 L24,125.499542 L24,33 L72,33 L72,78.7489969 Z" id="shine-back-lower" opacity="0.502485795" fill="#FFFFFF" sketch:type="MSShapeGroup" transform="translate(44.000000, 137.000000) scale(-1, 1) translate(-44.000000, -137.000000) "></path>
+        <path d="M15.1007072,160 C15.0340026,160.823327 15,161.655901 15,162.496422 L15,212.503578 C15,229.346287 28.6516114,243 45.5,243 C62.3446849,243 76,229.347515 76,212.503578 L76,162.496422 C76,161.655906 75.9660021,160.823332 75.8993056,160 L15.1007072,160 Z" id="liquid" fill="#00A8EF" sketch:type="MSShapeGroup"></path>
+        <path d="M25.1962773,171.307518 C33.7048862,173.929879 37.1404042,168.259338 47.6365885,168.259337 C56.2697385,168.259337 62.5933969,172.848964 67.7015452,170.323791 C71.265409,168.562023 75.9999997,163.089955 76,160.027098 C76,152.092983 68.8581047,150.613445 59.9499435,150.613445 C51.0417824,150.613446 51.649348,147.709057 42.6334801,147.709057 C33.6176122,147.709058 31.927208,148.727727 26.2688619,150.613445 C18.8444963,153.087713 15,155.797618 15,160.027098 C15,164.640707 16.6876684,168.685158 25.1962773,171.307518 Z" id="liquid-top" fill="#02A2E6" sketch:type="MSShapeGroup"></path>
+        <path d="M75,41.652746 L75,82.5 L75,41.652746 C75,41.652746 75,41.652746 75,41.652746 Z M19,43.1421602 L19,132 L19.2829211,132 L19.2829211,132 C19.096469,133.304475 19,134.637907 19,135.993805 L19,212.006195 C19,226.245324 29.6306297,238.001412 43.3937987,239.770061 L43.3937987,239.770061 C33.8658036,236.589475 27,227.596809 27,217.000122 L27,136.499939 L27,45.25262 C24.1696358,44.6755186 21.49107,43.9664801 19,43.1421602 Z" id="shine-front" opacity="0.753480114" fill="#FFFFFF" sketch:type="MSShapeGroup"></path>
+        <path d="M45,42 C69.852815,42 90,32.5979803 90,21 C90,9.40201968 69.852815,0 45,0 C20.147185,0 0,9.40201968 0,21 C0,32.5979803 20.147185,42 45,42 Z M45.5,33 C65.1061096,33 81,26.5081293 81,18.5 C81,10.4918707 65.1061096,4 45.5,4 C25.8938904,4 10,10.4918707 10,18.5 C10,26.5081293 25.8938904,33 45.5,33 Z" id="upper-border" fill="#65C8F6" sketch:type="MSShapeGroup"></path>
+        <g id="Bubble-+-Bubble-+-Bubble" sketch:type="MSLayerGroup" transform="translate(32.000000, 72.000000)">
+            <g id="Bubble" sketch:type="MSShapeGroup">
+                <circle id="Oval-8" fill="#D7F3FE" cx="7.5" cy="7.5" r="7.5"></circle>
+                <path d="M5.5,8 C6.88071194,8 8,6.88071194 8,5.5 C8,4.11928806 6.88071194,3 5.5,3 C4.11928806,3 3,4.11928806 3,5.5 C3,6.88071194 4.11928806,8 5.5,8 Z" id="Oval-8" fill="#FFFFFF" filter="url(#filter-1)"></path>
+            </g>
+            <g id="Bubble" transform="translate(15.000000, 27.000000)" sketch:type="MSShapeGroup">
+                <circle id="Oval-8" fill="#D7F3FE" cx="4.5" cy="4.5" r="4.5"></circle>
+                <path d="M3.5,5 C4.32842717,5 5,4.32842717 5,3.5 C5,2.67157283 4.32842717,2 3.5,2 C2.67157283,2 2,2.67157283 2,3.5 C2,4.32842717 2.67157283,5 3.5,5 Z" id="Oval-8" fill="#FFFFFF" filter="url(#filter-2)"></path>
+            </g>
+            <g id="Bubble" transform="translate(1.000000, 48.000000)" sketch:type="MSShapeGroup">
+                <circle id="Oval-8" fill="#D7F3FE" cx="4" cy="4" r="4"></circle>
+                <path d="M3.5,5 C4.32842717,5 5,4.32842717 5,3.5 C5,2.67157283 4.32842717,2 3.5,2 C2.67157283,2 2,2.67157283 2,3.5 C2,4.32842717 2.67157283,5 3.5,5 Z" id="Oval-8" fill="#FFFFFF" filter="url(#filter-3)"></path>
+            </g>
+        </g>
+    </g>
+</svg>

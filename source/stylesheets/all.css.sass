@@ -1,0 +1,159 @@
+@import "normalize-css"
+@import "bourbon/app/assets/stylesheets/bourbon"
+@import "neat"
+@import "font-awesome"
+
+$background-color: rgb(252,245,228)
+$font-color: rgb(11,42,53)
+$accent-color: rgb(191,88,44)
+$unobtrusive-color: rgb(91,109,116)
+$hint-color: $accent-color
+$link-color: rgb(59,142,207)
+$link-visited-color: $link-color
+
+$mobile: new-breakpoint(max-width 700px 6)
+
+html, body
+  height: 100%
+  font-size: 100%
+  color: $font-color
+  background: $background-color
+  //+media(new-breakpoint(max-width 1000px))
+  //  font-size: 80%
+
+body
+  font-family: 'Exo 2', sans-serif
+
+body.index
+  +outer-container
+
+h2, h3
+  color: $accent-color
+
+em
+  font-style: normal
+  font-weight: 400
+  color: $hint-color
+
+a
+  font-style: normal
+  font-weight: 400
+  color: $link-color
+  text-decoration: none
+  position: relative
+
+  &:visited
+    color: $link-visited-color
+  &::before
+    content: ''
+    position: absolute
+    bottom: 0
+    width: 0
+    left: 50%
+    border-bottom: 1px solid $link-color
+    transition: all .5s ease-in-out
+  &:hover::before
+    width: 100%
+    left: 0
+
+#name-job
+  +span-columns(9)
+  +media($mobile)
+    +span-columns(6)
+
+  .name
+    font-size: 5rem
+    margin: 0
+  .job-title
+    font-size: 1.7rem
+    font-weight: 200
+    margin: 0
+    color: $unobtrusive-color
+
+#contact
+  +span-columns(3)
+  +media($mobile)
+    +span-columns(6)
+  table
+    margin-top: 1rem
+    width: 90%
+    td:first-child
+      text-align: center
+      padding: 4px
+
+#abstract
+  margin-top: 1.5rem
+  font-size: 1.2rem
+  font-weight: 200
+
+#abstract, #education, #experience, #voluntary-experience, #interests, #references, #footer
+  +span-columns(12)
+  td
+    &:first-child
+      max-width: 15rem
+      padding-right: 1rem
+    vertical-align: top
+    padding-bottom: 1rem
+    h4
+      color: $font-color
+      margin: .5rem 0 0 0
+    ul
+      margin: .5rem 0 0 0
+    aside
+      font-weight: 200
+      color: $unobtrusive-color
+  dd
+    font-weight: 200
+    color: $unobtrusive-color
+  h2
+    text-transform: uppercase
+
+#education
+  td:first-child
+    white-space: nowrap
+    font-weight: 200
+    color: $unobtrusive-color
+
+#experience, #voluntary-experience
+  td:first-child
+    width: 20%
+    font-weight: bold
+    aside
+      margin-top: 0.5rem
+    small
+      color: $unobtrusive-color
+      font-weight: normal
+      display: block
+
+#interests
+  ul
+    li
+      +span-columns(6)
+      +media($mobile)
+        +span-columns(6)
+      +omega(2n)
+      list-style: circle
+      &:before
+        content: '\25CF'
+        position: relative
+        left: -1rem
+  p
+    +span-columns(12)
+
+#footer
+  border-top: 1px solid $font-color
+  margin: 1rem 0
+  padding: 1rem
+  font-weight: 200
+  font-size: .8rem
+  font-color: $unobtrusive-color
+  text-align: center
+
+@media print
+  html, body
+    font-size: 88%
+
+  #abstract, #education, #experience, #voluntary-experience, #interests, #references, #footer
+    page-break-inside: avoid
+  #footer
+    display: none

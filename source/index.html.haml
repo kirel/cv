@@ -1,0 +1,212 @@
+%section#header
+  #name-job
+    %h1.name Daniel Kirsch
+    %h2.job-title Mathmatician. Full Stack Web Developer.
+  #contact
+    %table
+      %tr.web
+        %td
+          %i.fa.fa-globe
+        %td
+          = link_to 'http://danielkirs.ch'
+      %tr.mail
+        %td
+          %i.fa.fa-envelope
+        %td
+          = link_to 'mail@danielkirs.ch'
+      %tr.phone
+        %td
+          %i.fa.fa-mobile
+        %td
+          +49 1511 5729370
+      %tr.twitter
+        %td
+          %i.fa.fa-twitter
+        %td
+          = link_to "@kirel", "http://twitter.com/kirel"
+
+%p#abstract
+  Full Stack <em>Web Developer</em> at <em>Zweitag GmbH</em> with a
+  <em>math</em> diploma from <em>University of Münster</em> and a background in
+  <em>pattern recognition</em> and <em>machine learning</em>. Maker of
+  #{link_to 'detexify', 'http://detexify.kirelabs.org'}.
+
+%section#education
+  %h2
+    %i.fa.fa-book
+    Education
+
+  %table
+    %tr
+      %td 1993 - 2002
+      %td
+        Gymnasium Laurentianum Warendorf
+        %aside Abitur &#8709; 2,0
+    %tr
+      %td 10/2003 - 11/2010
+      %td
+        University of Münster
+        %aside
+          Diploma in Mathmatics / Computer Science &#8709; 1,5
+          %br
+          Thesis (1,3):
+          = link_to '&raquo;Detexify: Recognition of hand-drawn LaTeX symbols&laquo;', 'thesis.pdf'
+          implemented as a <em>REST</em>ful webservice written in <em>Haskell</em> and <em>Ruby</em> using <em>machine learning</em> techniques. Samples are stored in <em>CouchDB</em>. See #{link_to 'http://detexify.kirelabs.org'}.
+
+%section#experience
+  %h2
+    %i.fa.fa-clock-o
+    Experience
+
+  %table
+    %tr
+      %td
+        Zweitag GmbH
+        %small Ruby on Rails Consultancy
+        %aside 8/2009 - present
+      %td
+        Software Developer
+        %aside
+          I worked on a variety of projects ranging from ecommerce sites using <em>spree</em> and auction systems to business intelligence tools with data visualisations using <em>D3.js</em>. Zweitag works behaviour driven using <em>Rspec</em>, <em>Capybara</em> and <em>Jasmine</em>. As well as working on the <em>Rails</em> backend I am proficient with frontend technologies like <em>Haml</em>, <em>SASS</em> and client-side <em>Javascript</em>-frameworks.
+          %h4 Responsibilities & Achievements
+          %ul
+            %li Helped establish <em>TDD/BDD</em> as a company best-practice
+            %li Introduced <em>Angular.js</em> as a core technology in Zweitag's projects
+            %li (Co-)authored the software QA-process (<em>code review</em>)
+            %li (Co-)authored and coordinated the corporate <em>mentorship</em> program
+            %li Evaluated prospect interns and student workers and (co-)authored best-practices regarding the hiring process
+            %li (Co-)authored learning materials for interns and new hires
+    %tr
+      %td
+        Visualization and Computer Graphics Research Group
+        %small of the University of Münster
+        %aside 10/2008 - 3/2009
+      %td
+        Student worker: Voreen
+        %aside Worked on the medical imaging engine Voreen in <em>C++</em> and <em>OpenGL</em>.
+    %tr
+      %td
+        Databases and Information Systems Group
+        %small of the University of Münster
+        %aside 11/2008 -  3/2009
+      %td
+        Student worker: Project Learnr
+        %aside Built a <em>REST</em>ful webservice for managing assets for an E-Learning platform using <em>Ruby on Rails</em>.
+    %tr
+      %td
+        Institute of Mathematical Statistics
+        %small of the University of Münster
+        %aside 10/2007 - 10/2008
+      %td
+        Tutor in stochastics / probability theory
+        %aside Tutorials and correction of student homework.
+
+
+
+%section#voluntary-experience
+  %h2
+    %i.fa.fa-users
+    Voluntary experience
+
+  %table
+    %tr
+      %td Monster on Rails
+      %td
+        Speaker
+        %aside
+          at the local Rails user group with talks on
+          %ul
+            %li Angular.js
+            %li= link_to 'Functional Javascript', 'http://kirelabs.org/fun-js'
+    %tr
+      %td Open Source
+      %td
+        Occasional contributor
+        %aside See #{link_to 'http://github.com/kirel'}.
+    %tr
+      %td
+        TuS Hiltrup 1930 e.V.
+        %aside 8/2006 - present
+      %td
+        Track&field coach
+        %aside
+          Coaching young athletes between ages 12 to 19 especially in vertical jumps and pole vault. Earned several qualifacations and final places in the german youth nationals.
+    %tr
+      %td
+        FLVW
+        %aside 8/2006
+      %td
+        Track&field coaching license (C-Lizenz)
+    %tr
+      %td
+        LG Brillux Münster
+        %aside 10/2011 - present
+      %td
+        Sportwart Nachwuchs
+        %aside
+          %h4 Responsibilities
+          %ul
+            %li Organisation and supervision of track&field competitions
+            %li Creation and implementation of young athletics nurturing programs
+            %li Uniting coaches of the LG by shaping the mutual vision
+    %tr
+      %td
+        Heinrich-Tellen-Schule
+        %small in Warendorf
+        %aside 8/2002 - 6/2003
+      %td
+        Community Service
+        %aside at a school for special education.
+
+%section#interests
+  %h2
+    %i.fa.fa-flask
+    Interests
+
+  %ul
+    %li Reading (lots of) technical books
+    %li Lean Startup-methods
+    %li Data-driven decision making
+    %li Machine learning
+    %li Open Data / Data-Driven Journalism
+    %li Data Visualization
+    %li Functional Programming
+    %li Longboarding, Wakeboarding, Kitesurfing
+    %li Pole vault
+
+  %p
+    See
+    = link_to 'http://kirelabs.org'
+    for personal projects.
+
+.page-break
+
+%section#references
+  %h2
+    %i.fa.fa-comments
+    References
+
+  %dl
+    %dt Julian Schneider, CEO and Founder at Zweitag GmbH (#{link_to 'http://www.zweitag.de/de/team'})
+    %dd is my boss.
+  %dl
+    %dt Peter Großkopf, Founder at Zweitag GmbH (#{link_to 'http://www.zweitag.de/de/team'})
+    %dd was my boss and organises Monster on Rails.
+  %dl
+    %dt
+      Prof. Dr. Xiaoyi Jiang (#{link_to 'http://cvpr.uni-muenster.de/organisation/jiang.html'})
+    %dd supervised my diploma thesis at University of Münster.
+  %dl
+    %dt
+      Prof. Dr. Nina Gantern (#{link_to 'http://www-m14.ma.tum.de/index.php?id=14'})
+    %dd
+      was my statistics professor at University of Münster.
+  %dl
+    %dt
+      Prof. Timo Ropinski (#{link_to 'http://scivis.itn.liu.se/members/timo-ropinski'})
+    %dd is leading the Voreen project.
+
+%section#footer
+  This CV was hand-crafted by Daniel Kirsch using #{link_to 'Middleman', 'http://middlemanapp.com/'}, #{link_to 'Bourbon NEAT', 'http://neat.bourbon.io/'} and #{link_to 'Font Awesome', 'http://fortawesome.github.io/Font-Awesome/'}. It is hosted on
+  %i.fa.fa-github
+  pages. The color sheme is derived from #{link_to 'solarized', 'http://ethanschoonover.com/solarized'}.
