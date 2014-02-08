@@ -12,10 +12,15 @@ $link-color: rgb(59,142,207)
 $link-visited-color: $link-color
 
 $mobile: new-breakpoint(max-width 700px 6)
+$phone: new-breakpoint(max-width 500px 6)
 
 html, body
   height: 100%
   font-size: 100%
+
+body
+  padding: 1rem
+  font-size: 1rem
   color: $font-color
   background: $background-color
   //+media(new-breakpoint(max-width 1000px))
@@ -29,6 +34,9 @@ body.index
 
 h2, h3
   color: $accent-color
+
+h2
+  font-size: 1.5rem
 
 em
   font-style: normal
@@ -64,8 +72,12 @@ a
   .name
     font-size: 5rem
     margin: 0
+    +media($phone)
+      font-size: 3.5rem
   .job-title
     font-size: 1.7rem
+    +media($phone)
+      font-size: 1.2rem
     font-weight: 200
     margin: 0
     color: $unobtrusive-color
