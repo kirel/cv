@@ -127,6 +127,13 @@ a
     color: $unobtrusive-color
 
 #experience, #voluntary-experience
+  @media screen
+    table
+      margin-left: .6rem
+    td:first-child
+      border-left: 1px solid $accent-color
+      padding-left: 1rem
+      border-bottom: 1rem solid $background-color
   td:first-child
     width: 20%
     font-weight: bold
@@ -136,6 +143,21 @@ a
       color: $unobtrusive-color
       font-weight: normal
       display: block
+
+#education, #experience, #voluntary-experience
+  +media($phone)
+    table, tr, td
+      display: block
+    tr
+      border-left: 1px solid $accent-color
+      padding-left: 1rem
+      // margin-left: .6rem
+      margin-bottom: 1rem
+    td:first-child
+      border: none
+      width: 100%
+      padding-bottom: .5rem
+      padding-left: 0
 
 #interests
   ul
