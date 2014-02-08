@@ -2317,15 +2317,15 @@ a {
 
 @media screen {
   /* line 131, /Users/danielkirsch/code/cv/source/stylesheets/all.css.sass */
-  #experience table, #voluntary-experience table {
+  #experience table, #voluntary-experience table, #education table {
     margin-left: 0.6rem; }
   /* line 133, /Users/danielkirsch/code/cv/source/stylesheets/all.css.sass */
-  #experience td:first-child, #voluntary-experience td:first-child {
+  #experience td:first-child, #voluntary-experience td:first-child, #education td:first-child {
     border-bottom: 1rem solid #fcf5e4;
     padding-left: 1rem;
     position: relative; }
     /* line 137, /Users/danielkirsch/code/cv/source/stylesheets/all.css.sass */
-    #experience td:first-child::before, #voluntary-experience td:first-child::before {
+    #experience td:first-child::before, #voluntary-experience td:first-child::before, #education td:first-child::before {
       content: "";
       position: absolute;
       left: 0;
@@ -2335,43 +2335,47 @@ a {
       top: 0;
       height: 100%; }
       /* line 146, /Users/danielkirsch/code/cv/source/stylesheets/all.css.sass */
-      .no-touch #experience td:first-child::before, .no-touch #voluntary-experience td:first-child::before {
+      .no-touch #experience td:first-child::before, .no-touch #voluntary-experience td:first-child::before, .no-touch #education td:first-child::before {
         height: 0;
         top: 50%; }
   /* line 151, /Users/danielkirsch/code/cv/source/stylesheets/all.css.sass */
-  #experience tr:hover td:first-child::before, #voluntary-experience tr:hover td:first-child::before {
+  #experience tr:hover td:first-child::before, #voluntary-experience tr:hover td:first-child::before, #education tr:hover td:first-child::before {
     top: 0;
     height: 100%; } }
-/* line 154, /Users/danielkirsch/code/cv/source/stylesheets/all.css.sass */
+
+/* line 156, /Users/danielkirsch/code/cv/source/stylesheets/all.css.sass */
 #experience td:first-child, #voluntary-experience td:first-child {
   width: 20%;
   font-weight: bold; }
-  /* line 157, /Users/danielkirsch/code/cv/source/stylesheets/all.css.sass */
+  /* line 159, /Users/danielkirsch/code/cv/source/stylesheets/all.css.sass */
   #experience td:first-child aside, #voluntary-experience td:first-child aside {
     margin-top: 0.5rem; }
-  /* line 159, /Users/danielkirsch/code/cv/source/stylesheets/all.css.sass */
+  /* line 161, /Users/danielkirsch/code/cv/source/stylesheets/all.css.sass */
   #experience td:first-child small, #voluntary-experience td:first-child small {
     color: #5b6d74;
     font-weight: normal;
     display: block; }
 
 @media screen and (max-width: 525px) {
-  /* line 166, /Users/danielkirsch/code/cv/source/stylesheets/all.css.sass */
+  /* line 168, /Users/danielkirsch/code/cv/source/stylesheets/all.css.sass */
   #education table, #education tr, #education td, #experience table, #experience tr, #experience td, #voluntary-experience table, #voluntary-experience tr, #voluntary-experience td {
     display: block; }
-  /* line 168, /Users/danielkirsch/code/cv/source/stylesheets/all.css.sass */
+  /* line 170, /Users/danielkirsch/code/cv/source/stylesheets/all.css.sass */
   #education tr, #experience tr, #voluntary-experience tr {
     border-left: 1px solid #bf582c;
     padding-left: 1rem;
     margin-bottom: 1rem; }
-  /* line 173, /Users/danielkirsch/code/cv/source/stylesheets/all.css.sass */
+  /* line 175, /Users/danielkirsch/code/cv/source/stylesheets/all.css.sass */
   #education td:first-child, #experience td:first-child, #voluntary-experience td:first-child {
     border: none;
     width: 100%;
     padding-bottom: 0.5rem;
-    padding-left: 0; } }
+    padding-left: 0; }
+    /* line 180, /Users/danielkirsch/code/cv/source/stylesheets/all.css.sass */
+    #education td:first-child::before, #experience td:first-child::before, #voluntary-experience td:first-child::before {
+      display: none; } }
 
-/* line 181, /Users/danielkirsch/code/cv/source/stylesheets/all.css.sass */
+/* line 185, /Users/danielkirsch/code/cv/source/stylesheets/all.css.sass */
 #interests ul li {
   float: left;
   display: block;
@@ -2382,7 +2386,7 @@ a {
   #interests ul li:last-child {
     margin-right: 0; }
   @media screen and (max-width: 700px) {
-    /* line 181, /Users/danielkirsch/code/cv/source/stylesheets/all.css.sass */
+    /* line 185, /Users/danielkirsch/code/cv/source/stylesheets/all.css.sass */
     #interests ul li {
       float: left;
       display: block;
@@ -2397,12 +2401,12 @@ a {
   /* line 75, /Users/danielkirsch/code/cv/bower_components/neat/app/assets/stylesheets/grid/_omega.scss */
   #interests ul li:nth-child(2n+1) {
     clear: left; }
-  /* line 187, /Users/danielkirsch/code/cv/source/stylesheets/all.css.sass */
+  /* line 191, /Users/danielkirsch/code/cv/source/stylesheets/all.css.sass */
   #interests ul li:before {
     content: "\25CF";
     position: relative;
     left: -1rem; }
-/* line 191, /Users/danielkirsch/code/cv/source/stylesheets/all.css.sass */
+/* line 195, /Users/danielkirsch/code/cv/source/stylesheets/all.css.sass */
 #interests p {
   float: left;
   display: block;
@@ -2412,7 +2416,7 @@ a {
   #interests p:last-child {
     margin-right: 0; }
 
-/* line 194, /Users/danielkirsch/code/cv/source/stylesheets/all.css.sass */
+/* line 198, /Users/danielkirsch/code/cv/source/stylesheets/all.css.sass */
 #footer {
   border-top: 1px solid #0b2a35;
   margin: 1rem 0;
@@ -2423,14 +2427,14 @@ a {
   text-align: center; }
 
 @media print {
-  /* line 204, /Users/danielkirsch/code/cv/source/stylesheets/all.css.sass */
+  /* line 208, /Users/danielkirsch/code/cv/source/stylesheets/all.css.sass */
   html, body {
     font-size: 86%; }
 
-  /* line 207, /Users/danielkirsch/code/cv/source/stylesheets/all.css.sass */
+  /* line 211, /Users/danielkirsch/code/cv/source/stylesheets/all.css.sass */
   #abstract, #education, #experience, #voluntary-experience, #interests, #references, #footer {
     page-break-inside: avoid; }
 
-  /* line 209, /Users/danielkirsch/code/cv/source/stylesheets/all.css.sass */
+  /* line 213, /Users/danielkirsch/code/cv/source/stylesheets/all.css.sass */
   #footer {
     display: none; } }
