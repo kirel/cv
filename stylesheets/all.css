@@ -2133,18 +2133,23 @@ th {
 .fa-plus-square-o:before {
   content: "\f196"; }
 
-/* line 16, /Users/danielkirsch/code/cv/source/stylesheets/all.css.sass */
+/* line 17, /Users/danielkirsch/code/cv/source/stylesheets/all.css.sass */
 html, body {
   height: 100%;
-  font-size: 100%;
+  font-size: 100%; }
+
+/* line 21, /Users/danielkirsch/code/cv/source/stylesheets/all.css.sass */
+body {
+  padding: 1rem;
+  font-size: 1rem;
   color: #0b2a35;
   background: #fcf5e4; }
 
-/* line 24, /Users/danielkirsch/code/cv/source/stylesheets/all.css.sass */
+/* line 29, /Users/danielkirsch/code/cv/source/stylesheets/all.css.sass */
 body {
   font-family: "Exo 2", sans-serif; }
 
-/* line 27, /Users/danielkirsch/code/cv/source/stylesheets/all.css.sass */
+/* line 32, /Users/danielkirsch/code/cv/source/stylesheets/all.css.sass */
 body.index {
   *zoom: 1;
   max-width: 68em;
@@ -2158,27 +2163,31 @@ body.index {
   body.index:after {
     clear: both; }
 
-/* line 30, /Users/danielkirsch/code/cv/source/stylesheets/all.css.sass */
+/* line 35, /Users/danielkirsch/code/cv/source/stylesheets/all.css.sass */
 h2, h3 {
   color: #bf582c; }
 
-/* line 33, /Users/danielkirsch/code/cv/source/stylesheets/all.css.sass */
+/* line 38, /Users/danielkirsch/code/cv/source/stylesheets/all.css.sass */
+h2 {
+  font-size: 1.5rem; }
+
+/* line 41, /Users/danielkirsch/code/cv/source/stylesheets/all.css.sass */
 em {
   font-style: normal;
   font-weight: 400;
   color: #bf582c; }
 
-/* line 38, /Users/danielkirsch/code/cv/source/stylesheets/all.css.sass */
+/* line 46, /Users/danielkirsch/code/cv/source/stylesheets/all.css.sass */
 a {
   font-style: normal;
   font-weight: 400;
   color: #3b8ecf;
   text-decoration: none;
   position: relative; }
-  /* line 45, /Users/danielkirsch/code/cv/source/stylesheets/all.css.sass */
+  /* line 53, /Users/danielkirsch/code/cv/source/stylesheets/all.css.sass */
   a:visited {
     color: #3b8ecf; }
-  /* line 47, /Users/danielkirsch/code/cv/source/stylesheets/all.css.sass */
+  /* line 55, /Users/danielkirsch/code/cv/source/stylesheets/all.css.sass */
   a::before {
     content: "";
     position: absolute;
@@ -2187,12 +2196,12 @@ a {
     left: 50%;
     border-bottom: 1px solid #3b8ecf;
     transition: all 0.5s ease-in-out; }
-  /* line 55, /Users/danielkirsch/code/cv/source/stylesheets/all.css.sass */
+  /* line 63, /Users/danielkirsch/code/cv/source/stylesheets/all.css.sass */
   a:hover::before {
     width: 100%;
     left: 0; }
 
-/* line 59, /Users/danielkirsch/code/cv/source/stylesheets/all.css.sass */
+/* line 67, /Users/danielkirsch/code/cv/source/stylesheets/all.css.sass */
 #name-job {
   float: left;
   display: block;
@@ -2202,7 +2211,7 @@ a {
   #name-job:last-child {
     margin-right: 0; }
   @media screen and (max-width: 700px) {
-    /* line 59, /Users/danielkirsch/code/cv/source/stylesheets/all.css.sass */
+    /* line 67, /Users/danielkirsch/code/cv/source/stylesheets/all.css.sass */
     #name-job {
       float: left;
       display: block;
@@ -2211,18 +2220,26 @@ a {
       /* line 40, /Users/danielkirsch/code/cv/bower_components/neat/app/assets/stylesheets/grid/_span-columns.scss */
       #name-job:last-child {
         margin-right: 0; } }
-  /* line 64, /Users/danielkirsch/code/cv/source/stylesheets/all.css.sass */
+  /* line 72, /Users/danielkirsch/code/cv/source/stylesheets/all.css.sass */
   #name-job .name {
     font-size: 5rem;
     margin: 0; }
-  /* line 67, /Users/danielkirsch/code/cv/source/stylesheets/all.css.sass */
+    @media screen and (max-width: 500px) {
+      /* line 72, /Users/danielkirsch/code/cv/source/stylesheets/all.css.sass */
+      #name-job .name {
+        font-size: 3.5rem; } }
+  /* line 77, /Users/danielkirsch/code/cv/source/stylesheets/all.css.sass */
   #name-job .job-title {
     font-size: 1.7rem;
     font-weight: 200;
     margin: 0;
     color: #5b6d74; }
+    @media screen and (max-width: 500px) {
+      /* line 77, /Users/danielkirsch/code/cv/source/stylesheets/all.css.sass */
+      #name-job .job-title {
+        font-size: 1.2rem; } }
 
-/* line 73, /Users/danielkirsch/code/cv/source/stylesheets/all.css.sass */
+/* line 85, /Users/danielkirsch/code/cv/source/stylesheets/all.css.sass */
 #contact {
   float: left;
   display: block;
@@ -2232,7 +2249,7 @@ a {
   #contact:last-child {
     margin-right: 0; }
   @media screen and (max-width: 700px) {
-    /* line 73, /Users/danielkirsch/code/cv/source/stylesheets/all.css.sass */
+    /* line 85, /Users/danielkirsch/code/cv/source/stylesheets/all.css.sass */
     #contact {
       float: left;
       display: block;
@@ -2241,22 +2258,22 @@ a {
       /* line 40, /Users/danielkirsch/code/cv/bower_components/neat/app/assets/stylesheets/grid/_span-columns.scss */
       #contact:last-child {
         margin-right: 0; } }
-  /* line 77, /Users/danielkirsch/code/cv/source/stylesheets/all.css.sass */
+  /* line 89, /Users/danielkirsch/code/cv/source/stylesheets/all.css.sass */
   #contact table {
     margin-top: 1rem;
     width: 90%; }
-    /* line 80, /Users/danielkirsch/code/cv/source/stylesheets/all.css.sass */
+    /* line 92, /Users/danielkirsch/code/cv/source/stylesheets/all.css.sass */
     #contact table td:first-child {
       text-align: center;
       padding: 4px; }
 
-/* line 84, /Users/danielkirsch/code/cv/source/stylesheets/all.css.sass */
+/* line 96, /Users/danielkirsch/code/cv/source/stylesheets/all.css.sass */
 #abstract {
   margin-top: 1.5rem;
   font-size: 1.2rem;
   font-weight: 200; }
 
-/* line 89, /Users/danielkirsch/code/cv/source/stylesheets/all.css.sass */
+/* line 101, /Users/danielkirsch/code/cv/source/stylesheets/all.css.sass */
 #abstract, #education, #experience, #voluntary-experience, #interests, #references, #footer {
   float: left;
   display: block;
@@ -2265,53 +2282,53 @@ a {
   /* line 40, /Users/danielkirsch/code/cv/bower_components/neat/app/assets/stylesheets/grid/_span-columns.scss */
   #abstract:last-child, #education:last-child, #experience:last-child, #voluntary-experience:last-child, #interests:last-child, #references:last-child, #footer:last-child {
     margin-right: 0; }
-  /* line 91, /Users/danielkirsch/code/cv/source/stylesheets/all.css.sass */
+  /* line 103, /Users/danielkirsch/code/cv/source/stylesheets/all.css.sass */
   #abstract td, #education td, #experience td, #voluntary-experience td, #interests td, #references td, #footer td {
     vertical-align: top;
     padding-bottom: 1rem; }
-    /* line 92, /Users/danielkirsch/code/cv/source/stylesheets/all.css.sass */
+    /* line 104, /Users/danielkirsch/code/cv/source/stylesheets/all.css.sass */
     #abstract td:first-child, #education td:first-child, #experience td:first-child, #voluntary-experience td:first-child, #interests td:first-child, #references td:first-child, #footer td:first-child {
       max-width: 15rem;
       padding-right: 1rem; }
-    /* line 97, /Users/danielkirsch/code/cv/source/stylesheets/all.css.sass */
+    /* line 109, /Users/danielkirsch/code/cv/source/stylesheets/all.css.sass */
     #abstract td h4, #education td h4, #experience td h4, #voluntary-experience td h4, #interests td h4, #references td h4, #footer td h4 {
       color: #0b2a35;
       margin: 0.5rem 0 0 0; }
-    /* line 100, /Users/danielkirsch/code/cv/source/stylesheets/all.css.sass */
+    /* line 112, /Users/danielkirsch/code/cv/source/stylesheets/all.css.sass */
     #abstract td ul, #education td ul, #experience td ul, #voluntary-experience td ul, #interests td ul, #references td ul, #footer td ul {
       margin: 0.5rem 0 0 0; }
-    /* line 102, /Users/danielkirsch/code/cv/source/stylesheets/all.css.sass */
+    /* line 114, /Users/danielkirsch/code/cv/source/stylesheets/all.css.sass */
     #abstract td aside, #education td aside, #experience td aside, #voluntary-experience td aside, #interests td aside, #references td aside, #footer td aside {
       font-weight: 200;
       color: #5b6d74; }
-  /* line 105, /Users/danielkirsch/code/cv/source/stylesheets/all.css.sass */
+  /* line 117, /Users/danielkirsch/code/cv/source/stylesheets/all.css.sass */
   #abstract dd, #education dd, #experience dd, #voluntary-experience dd, #interests dd, #references dd, #footer dd {
     font-weight: 200;
     color: #5b6d74; }
-  /* line 108, /Users/danielkirsch/code/cv/source/stylesheets/all.css.sass */
+  /* line 120, /Users/danielkirsch/code/cv/source/stylesheets/all.css.sass */
   #abstract h2, #education h2, #experience h2, #voluntary-experience h2, #interests h2, #references h2, #footer h2 {
     text-transform: uppercase; }
 
-/* line 112, /Users/danielkirsch/code/cv/source/stylesheets/all.css.sass */
+/* line 124, /Users/danielkirsch/code/cv/source/stylesheets/all.css.sass */
 #education td:first-child {
   white-space: nowrap;
   font-weight: 200;
   color: #5b6d74; }
 
-/* line 118, /Users/danielkirsch/code/cv/source/stylesheets/all.css.sass */
+/* line 130, /Users/danielkirsch/code/cv/source/stylesheets/all.css.sass */
 #experience td:first-child, #voluntary-experience td:first-child {
   width: 20%;
   font-weight: bold; }
-  /* line 121, /Users/danielkirsch/code/cv/source/stylesheets/all.css.sass */
+  /* line 133, /Users/danielkirsch/code/cv/source/stylesheets/all.css.sass */
   #experience td:first-child aside, #voluntary-experience td:first-child aside {
     margin-top: 0.5rem; }
-  /* line 123, /Users/danielkirsch/code/cv/source/stylesheets/all.css.sass */
+  /* line 135, /Users/danielkirsch/code/cv/source/stylesheets/all.css.sass */
   #experience td:first-child small, #voluntary-experience td:first-child small {
     color: #5b6d74;
     font-weight: normal;
     display: block; }
 
-/* line 130, /Users/danielkirsch/code/cv/source/stylesheets/all.css.sass */
+/* line 142, /Users/danielkirsch/code/cv/source/stylesheets/all.css.sass */
 #interests ul li {
   float: left;
   display: block;
@@ -2322,7 +2339,7 @@ a {
   #interests ul li:last-child {
     margin-right: 0; }
   @media screen and (max-width: 700px) {
-    /* line 130, /Users/danielkirsch/code/cv/source/stylesheets/all.css.sass */
+    /* line 142, /Users/danielkirsch/code/cv/source/stylesheets/all.css.sass */
     #interests ul li {
       float: left;
       display: block;
@@ -2337,12 +2354,12 @@ a {
   /* line 75, /Users/danielkirsch/code/cv/bower_components/neat/app/assets/stylesheets/grid/_omega.scss */
   #interests ul li:nth-child(2n+1) {
     clear: left; }
-  /* line 136, /Users/danielkirsch/code/cv/source/stylesheets/all.css.sass */
+  /* line 148, /Users/danielkirsch/code/cv/source/stylesheets/all.css.sass */
   #interests ul li:before {
     content: "\25CF";
     position: relative;
     left: -1rem; }
-/* line 140, /Users/danielkirsch/code/cv/source/stylesheets/all.css.sass */
+/* line 152, /Users/danielkirsch/code/cv/source/stylesheets/all.css.sass */
 #interests p {
   float: left;
   display: block;
@@ -2352,7 +2369,7 @@ a {
   #interests p:last-child {
     margin-right: 0; }
 
-/* line 143, /Users/danielkirsch/code/cv/source/stylesheets/all.css.sass */
+/* line 155, /Users/danielkirsch/code/cv/source/stylesheets/all.css.sass */
 #footer {
   border-top: 1px solid #0b2a35;
   margin: 1rem 0;
@@ -2363,14 +2380,14 @@ a {
   text-align: center; }
 
 @media print {
-  /* line 153, /Users/danielkirsch/code/cv/source/stylesheets/all.css.sass */
+  /* line 165, /Users/danielkirsch/code/cv/source/stylesheets/all.css.sass */
   html, body {
     font-size: 88%; }
 
-  /* line 156, /Users/danielkirsch/code/cv/source/stylesheets/all.css.sass */
+  /* line 168, /Users/danielkirsch/code/cv/source/stylesheets/all.css.sass */
   #abstract, #education, #experience, #voluntary-experience, #interests, #references, #footer {
     page-break-inside: avoid; }
 
-  /* line 158, /Users/danielkirsch/code/cv/source/stylesheets/all.css.sass */
+  /* line 170, /Users/danielkirsch/code/cv/source/stylesheets/all.css.sass */
   #footer {
     display: none; } }
