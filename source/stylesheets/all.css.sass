@@ -131,9 +131,26 @@ a
     table
       margin-left: .6rem
     td:first-child
-      border-left: 1px solid $accent-color
-      padding-left: 1rem
       border-bottom: 1rem solid $background-color
+      padding-left: 1rem
+      position: relative
+      &::before
+        content: ''
+        position: absolute
+        left: 0
+        width: 0
+        border-left: 1px solid $accent-color
+        transition: all .2s ease-out
+        top: 0
+        height: 100%
+        .no-touch &
+          height: 0
+          top: 50%
+    tr:hover
+      td:first-child
+        &::before
+          top: 0
+          height: 100%
   td:first-child
     width: 20%
     font-weight: bold
