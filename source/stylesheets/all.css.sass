@@ -12,7 +12,7 @@ $link-color: rgb(59,142,207)
 $link-visited-color: $link-color
 
 $mobile: new-breakpoint(max-width 700px 6)
-$iphone: new-breakpoint(max-width 320px 6)
+$iphone: new-breakpoint(max-width 380px 6)
 $phone: new-breakpoint(max-width 525px 6)
 $non-phone: new-breakpoint(min-width 526px 6)
 
@@ -21,24 +21,19 @@ html, body
   font-size: 100%
 
 body
+  +outer-container
   padding: 1rem
   font-size: 1rem
   color: $font-color
   background: $background-color
-  //+media(new-breakpoint(max-width 1000px))
-  //  font-size: 80%
-
-body
   font-family: 'Exo 2', sans-serif
-
-body.index
-  +outer-container
 
 h2, h3
   color: $accent-color
 
-h2
+h3
   font-size: 1.5rem
+  text-transform: uppercase
 
 em
   font-style: normal
@@ -66,72 +61,121 @@ a
     width: 100%
     left: 0
 
-#name-job
+  // external link indicator // I don't like it
+  // &[href^="http"]:after
+  //   content: "\f08e"
+  //   font-family: FontAwesome
+  //   font-weight: normal
+  //   font-style: normal
+  //   font-size: 60%
+  //   display: inline-block
+  //   text-decoration: none
+  //   padding-left: 3px
+
+%unobtrusive-text
+  font-weight: 200
+  color: $unobtrusive-color
+
+// Components
+#abstract, #education, #experience, #voluntary-experience, #interests, #references, #footer
+  +span-columns(12)
+
+#header
   +span-columns(9)
   +media($mobile)
     +span-columns(6)
 
-  .name
-    font-size: 5rem
+  #header__name
     margin: 0
+    font-size: 5rem
     +media($phone)
       font-size: 3.5rem
     +media($iphone)
       font-size: 2.8rem
-  .job-title
+      text-align: center
+  #header__profession
+    margin: 0
+    @extend %unobtrusive-text
     font-size: 1.65rem
     +media($phone)
       font-size: 1.15rem
     +media($iphone)
-      font-size: .95em
-    font-weight: 200
-    margin: 0
-    color: $unobtrusive-color
+      text-align: center
 
 #contact
   +span-columns(3)
   +media($mobile)
     +span-columns(6)
   table
+    float: right
     margin-top: 1rem
-    width: 90%
+    +media($mobile)
+      float: none
+      margin-left: 1rem
     td:first-child
+      width: 20px
       text-align: center
       padding: 4px
+    +media($iphone)
+      table, tr
+        display: block
+        text-align: center
+      td
+        display: inline
+      width: initial
+      margin-left: auto
+      margin-right: auto
 
-#abstract
+#abstract p
   margin-top: 1.5rem
-  font-size: 1.3rem
   font-weight: 200
+  font-size: 1.3rem
+  +media($mobile)
+    font-size: 1.15rem
+  +media($iphone)
+    text-align: justify
 
-#abstract, #education, #experience, #voluntary-experience, #interests, #references, #footer
-  +span-columns(12)
+#experience, #voluntary-experience, #education
+  td:first-child
+    min-width: 160px
+    width: 20%
+    max-width: 15rem
+    padding-right: 1rem
   td
-    &:first-child
-      max-width: 15rem
-      padding-right: 1rem
     vertical-align: top
     padding-bottom: .5rem
-    h4
-      color: $font-color
-      margin: .5rem 0 0 0
-    ul
-      margin: .5rem 0 0 0
-    aside
-      font-weight: 200
-      color: $unobtrusive-color
-  dd
-    font-weight: 200
-    color: $unobtrusive-color
-  h2
-    text-transform: uppercase
 
 #education
-  td:first-child
-    white-space: nowrap
-    font-weight: 200
-    color: $unobtrusive-color
+  .period
+    @extend %unobtrusive-text
+  .school-details
+    @extend %unobtrusive-text
 
+#experience, #voluntary-experience
+  .period
+    @extend %unobtrusive-text
+  .company, .organisation
+    font-weight: bold
+    .period
+      margin-top: 0.5rem
+    .company-details, .organisation-details
+      color: $unobtrusive-color
+      font-weight: normal
+      display: block
+  .activity, .employment
+    .employment-details, .activity-details
+      @extend %unobtrusive-text
+      h4
+        color: $font-color
+        margin: .5rem 0 0 0
+      ul
+        margin: .5rem 0 0 0
+
+#references
+  dd
+    @extend %unobtrusive-text
+
+// border effect
 #experience, #voluntary-experience, #education
   @media screen
     table
@@ -142,6 +186,7 @@ a
     td:first-child
       padding-left: 1rem
       position: relative
+      // left side bars
       &::before
         content: ''
         position: absolute
@@ -151,7 +196,7 @@ a
         transition: all .2s ease-out
         top: 0
         height: 100%
-        .no-touch &
+        .no-touch & // don't animate on touch devices
           height: 0
           top: 50%
     tr:hover
@@ -159,35 +204,20 @@ a
         &::before
           top: 0
           height: 100%
-
-#experience, #voluntary-experience, #education
-  td:first-child
-    width: 20%
-
-#experience, #voluntary-experience
-  td:first-child
-    font-weight: bold
-    aside
-      margin-top: 0.5rem
-    small
-      color: $unobtrusive-color
-      font-weight: normal
-      display: block
-
-#education, #experience, #voluntary-experience
-  +media($phone)
-    table, tr, td
-      display: block
-    tr
-      border-left: 1px solid $accent-color
-      padding-left: 1rem
-      margin-bottom: 1rem
-    td:first-child
-      border: none
-      width: 100%
-      padding-left: 0
-      &::before
-        display: none
+    // Narrow layout for phone
+    +media($phone)
+      table, tr, td
+        display: block
+      tr
+        border-left: 1px solid $accent-color
+        padding-left: 1rem
+        margin-bottom: 1rem
+      td:first-child
+        border: none
+        width: 100%
+        padding-left: 0
+        &::before
+          display: none
 
 #interests
   ul
@@ -208,11 +238,11 @@ a
   border-top: 1px solid $font-color
   margin: 1rem 0
   padding: 1rem
-  font-weight: 200
   font-size: .8rem
-  font-color: $unobtrusive-color
   text-align: center
+  @extend %unobtrusive-text
 
+// some print stuff
 @media print
   html, body
     font-size: 86%
