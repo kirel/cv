@@ -1,6 +1,7 @@
 %section
   #header
-    %h1#header__name Daniel Kirsch
+    %h1#header__name
+      %span Daniel Kirsch
     %h2#header__profession Mathematician. Full Stack Web Developer.
   #contact
     %table
@@ -34,8 +35,9 @@
 
 %section#education
   %h3
-    %i.fa.fa-book
-    Education
+    %span
+      %i.fa.fa-book
+      Education
 
   %table
     %tr
@@ -56,8 +58,9 @@
 
 %section#experience
   %h3
-    %i.fa.fa-clock-o
-    Experience
+    %span
+      %i.fa.fa-clock-o
+      Experience
 
   %table
     %tr
@@ -106,8 +109,9 @@
 
 %section#voluntary-experience
   %h3
-    %i.fa.fa-users
-    Voluntary experience
+    %span
+      %i.fa.fa-users
+      Voluntary experience
 
   %table
     %tr
@@ -161,8 +165,9 @@
 
 %section#interests
   %h3
-    %i.fa.fa-flask
-    Interests
+    %span
+      %i.fa.fa-flask
+      Interests
 
   %ul
     %li= link_to 'Reading technical books', 'https://readmill.com/danielkirsch'
@@ -182,8 +187,9 @@
 
 %section#references
   %h3
-    %i.fa.fa-comments
-    References
+    %span
+      %i.fa.fa-comments
+      References
 
   %dl
     %dt Julian Schneider, CEO and Founder at Zweitag GmbH (#{link_to 'http://www.zweitag.de/de/team', 'http://www.zweitag.de/de/team'})
@@ -202,3 +208,20 @@
   pages. The color scheme is derived from #{link_to 'solarized', 'http://ethanschoonover.com/solarized'}.
   %br
   Download the #{link_to 'PDF', "daniel-kirsch-cv.pdf", relative: true}.
+
+:javascript
+  document.addEventListener('mousemove', function(e) {
+    var bb, d, el, m, x, y, _i, _len, _ref, _results;
+    _ref = document.querySelectorAll('h1 span, h3 span');
+    _results = [];
+    for (_i = 0, _len = _ref.length; _i < _len; _i++) {
+      el = _ref[_i];
+      bb = el.getBoundingClientRect();
+      m = Math.atan(bb.height/20)*2;
+      d = 10;
+      blur = 0
+      x = m * Math.atan((bb.left + bb.width / 2 - e.clientX) / d);
+      y = m * Math.atan((bb.top + bb.height / 2 - e.clientY) / d);
+      _results.push(el.style['text-shadow'] = "" + x + "px " + y + "px " + blur + "px rgba(0,0,0,.2)");
+    }
+  });
