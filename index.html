@@ -18,7 +18,7 @@
     <section>
       <div id='header'>
         <h1 id='header__name'>
-          <span>Daniel Kirsch</span>
+          <span class='silly-shadow'>Daniel Kirsch</span>
         </h1>
         <h2 id='header__profession'>Mathematician. Full Stack Web Developer.</h2>
       </div>
@@ -69,7 +69,7 @@
     </section>
     <section id='education'>
       <h3>
-        <span>
+        <span class='silly-shadow'>
           <i class='fa fa-book'></i>
           Education
         </span>
@@ -99,7 +99,7 @@
     </section>
     <section id='experience'>
       <h3>
-        <span>
+        <span class='silly-shadow'>
           <i class='fa fa-clock-o'></i>
           Experience
         </span>
@@ -164,7 +164,7 @@
     </section>
     <section id='voluntary-experience'>
       <h3>
-        <span>
+        <span class='silly-shadow'>
           <i class='fa fa-users'></i>
           Voluntary experience
         </span>
@@ -243,7 +243,7 @@
     </section>
     <section id='interests'>
       <h3>
-        <span>
+        <span class='silly-shadow'>
           <i class='fa fa-flask'></i>
           Interests
         </span>
@@ -267,7 +267,7 @@
     </section>
     <section id='references'>
       <h3>
-        <span>
+        <span class='silly-shadow'>
           <i class='fa fa-comments'></i>
           References
         </span>
@@ -295,19 +295,18 @@
       Download the <a href="daniel-kirsch-cv.pdf">PDF</a>.
     </section>
     <script>
+      var els = document.querySelectorAll('.silly-shadow');
       document.addEventListener('mousemove', function(e) {
-        var bb, d, el, m, x, y, _i, _len, _ref, _results;
-        _ref = document.querySelectorAll('h1 span, h3 span');
-        _results = [];
-        for (_i = 0, _len = _ref.length; _i < _len; _i++) {
-          el = _ref[_i];
+        var bb, d, el, m, x, y;
+        for (var i = 0, len = els.length; i < len; i++) {
+          el = els[i];
           bb = el.getBoundingClientRect();
           m = Math.atan(bb.height/20)*2;
           d = 10;
           blur = 0
           x = m * Math.atan((bb.left + bb.width / 2 - e.clientX) / d);
           y = m * Math.atan((bb.top + bb.height / 2 - e.clientY) / d);
-          _results.push(el.style['text-shadow'] = "" + x + "px " + y + "px " + blur + "px rgba(0,0,0,.2)");
+          el.style['text-shadow'] = "" + x + "px " + y + "px " + blur + "px rgba(0,0,0,.2)";
         }
       });
     </script>
