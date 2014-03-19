@@ -17,7 +17,9 @@
   <body class='index'>
     <section>
       <div id='header'>
-        <h1 id='header__name'>Daniel Kirsch</h1>
+        <h1 id='header__name'>
+          <span>Daniel Kirsch</span>
+        </h1>
         <h2 id='header__profession'>Mathematician. Full Stack Web Developer.</h2>
       </div>
       <div id='contact'>
@@ -67,8 +69,10 @@
     </section>
     <section id='education'>
       <h3>
-        <i class='fa fa-book'></i>
-        Education
+        <span>
+          <i class='fa fa-book'></i>
+          Education
+        </span>
       </h3>
       <table>
         <tr>
@@ -95,8 +99,10 @@
     </section>
     <section id='experience'>
       <h3>
-        <i class='fa fa-clock-o'></i>
-        Experience
+        <span>
+          <i class='fa fa-clock-o'></i>
+          Experience
+        </span>
       </h3>
       <table>
         <tr>
@@ -158,8 +164,10 @@
     </section>
     <section id='voluntary-experience'>
       <h3>
-        <i class='fa fa-users'></i>
-        Voluntary experience
+        <span>
+          <i class='fa fa-users'></i>
+          Voluntary experience
+        </span>
       </h3>
       <table>
         <tr>
@@ -235,8 +243,10 @@
     </section>
     <section id='interests'>
       <h3>
-        <i class='fa fa-flask'></i>
-        Interests
+        <span>
+          <i class='fa fa-flask'></i>
+          Interests
+        </span>
       </h3>
       <ul>
         <li><a href="https://readmill.com/danielkirsch">Reading technical books</a></li>
@@ -257,8 +267,10 @@
     </section>
     <section id='references'>
       <h3>
-        <i class='fa fa-comments'></i>
-        References
+        <span>
+          <i class='fa fa-comments'></i>
+          References
+        </span>
       </h3>
       <dl>
         <dt>Julian Schneider, CEO and Founder at Zweitag GmbH (<a href="http://www.zweitag.de/de/team">http://www.zweitag.de/de/team</a>)</dt>
@@ -282,6 +294,23 @@
       <br>
       Download the <a href="daniel-kirsch-cv.pdf">PDF</a>.
     </section>
+    <script>
+      document.addEventListener('mousemove', function(e) {
+        var bb, d, el, m, x, y, _i, _len, _ref, _results;
+        _ref = document.querySelectorAll('h1 span, h3 span');
+        _results = [];
+        for (_i = 0, _len = _ref.length; _i < _len; _i++) {
+          el = _ref[_i];
+          bb = el.getBoundingClientRect();
+          m = Math.atan(bb.height/20)*2;
+          d = 10;
+          blur = 0
+          x = m * Math.atan((bb.left + bb.width / 2 - e.clientX) / d);
+          y = m * Math.atan((bb.top + bb.height / 2 - e.clientY) / d);
+          _results.push(el.style['text-shadow'] = "" + x + "px " + y + "px " + blur + "px rgba(0,0,0,.2)");
+        }
+      });
+    </script>
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
