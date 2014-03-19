@@ -1,7 +1,7 @@
 %section
   #header
     %h1#header__name
-      %span Daniel Kirsch
+      %span.silly-shadow Daniel Kirsch
     %h2#header__profession Mathematician. Full Stack Web Developer.
   #contact
     %table
@@ -35,7 +35,7 @@
 
 %section#education
   %h3
-    %span
+    %span.silly-shadow
       %i.fa.fa-book
       Education
 
@@ -58,7 +58,7 @@
 
 %section#experience
   %h3
-    %span
+    %span.silly-shadow
       %i.fa.fa-clock-o
       Experience
 
@@ -109,7 +109,7 @@
 
 %section#voluntary-experience
   %h3
-    %span
+    %span.silly-shadow
       %i.fa.fa-users
       Voluntary experience
 
@@ -165,7 +165,7 @@
 
 %section#interests
   %h3
-    %span
+    %span.silly-shadow
       %i.fa.fa-flask
       Interests
 
@@ -187,7 +187,7 @@
 
 %section#references
   %h3
-    %span
+    %span.silly-shadow
       %i.fa.fa-comments
       References
 
@@ -210,18 +210,17 @@
   Download the #{link_to 'PDF', "daniel-kirsch-cv.pdf", relative: true}.
 
 :javascript
+  var els = document.querySelectorAll('.silly-shadow');
   document.addEventListener('mousemove', function(e) {
-    var bb, d, el, m, x, y, _i, _len, _ref, _results;
-    _ref = document.querySelectorAll('h1 span, h3 span');
-    _results = [];
-    for (_i = 0, _len = _ref.length; _i < _len; _i++) {
-      el = _ref[_i];
+    var bb, d, el, m, x, y;
+    for (var i = 0, len = els.length; i < len; i++) {
+      el = els[i];
       bb = el.getBoundingClientRect();
       m = Math.atan(bb.height/20)*2;
       d = 10;
       blur = 0
       x = m * Math.atan((bb.left + bb.width / 2 - e.clientX) / d);
       y = m * Math.atan((bb.top + bb.height / 2 - e.clientY) / d);
-      _results.push(el.style['text-shadow'] = "" + x + "px " + y + "px " + blur + "px rgba(0,0,0,.2)");
+      el.style['text-shadow'] = "" + x + "px " + y + "px " + blur + "px rgba(0,0,0,.2)";
     }
   });
