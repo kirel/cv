@@ -295,22 +295,6 @@
       Download the <a href="daniel-kirsch-cv.pdf">PDF</a>.
     </section>
     <script>
-      var els = document.querySelectorAll('.silly-shadow');
-      document.addEventListener('mousemove', function(e) {
-        var bb, d, el, m, x, y;
-        for (var i = 0, len = els.length; i < len; i++) {
-          el = els[i];
-          bb = el.getBoundingClientRect();
-          m = Math.atan(bb.height/20)*2;
-          d = 10;
-          blur = 0
-          x = m * Math.atan((bb.left + bb.width / 2 - e.clientX) / d);
-          y = m * Math.atan((bb.top + bb.height / 2 - e.clientY) / d);
-          el.style['text-shadow'] = "" + x + "px " + y + "px " + blur + "px rgba(0,0,0,.2)";
-        }
-      });
-    </script>
-    <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
       m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
