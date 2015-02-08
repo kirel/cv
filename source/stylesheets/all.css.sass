@@ -222,13 +222,16 @@ a
           display: none
 
 #interests
+  #lists-wrapper
+    margin: 16px 0
   ul
-    li
+    margin: 0
+    +span-columns(6)
+    +media($mobile)
       +span-columns(6)
-      +media($mobile)
-        +span-columns(6)
       +omega(2n)
-      list-style: circle
+    li
+      list-style: none
       &:before
         content: '\25CF'
         position: relative
@@ -247,7 +250,7 @@ a
 // some print stuff
 @media print
   html, body
-    font-size: 84%
+    font-size: 81%
 
   #abstract, #education, #experience, #voluntary-experience, #interests, #references, #footer
     page-break-inside: avoid
