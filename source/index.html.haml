@@ -73,8 +73,17 @@
       %td.employment
         Data Scientist
         %aside.employment-details
-          Mathematical Modelling, Machine Learning, Artificial Intelligence, Optimization<br/>
-          in a wide range of projects using Python, Pandas, scikit-learn, keras, R and the tidyverse, caret, Shiny, Docker, Elasticsearch, ansible, AWS (whatever is the right tool for the job).
+          <em>Mathematical Modelling</em>, <em>Machine Learning</em>, <em>Artificial Intelligence</em>, <em>Optimization</em><br/>
+          in a wide range of contexts like IoT, urban planning, finance, mobility, and many more using Python, Pandas, scikit-learn, keras,
+          R and the tidyverse, caret, Shiny, Docker, Elasticsearch, Ansible, AWS (whatever is the right tool for the job).</br>
+          </br>
+          I also
+          %ul
+            %li <em>mentor</em> working students and younger colleagues
+            %li have established <em>reproducible research</em> principles in our projects (codified in project templates)
+            %li created an <em>infrastructure for my colleagues</em> to easily run analyses in pre-configured cloud environments
+            %li created a Docker-based infrastructure to make our web based demonstrator apps available to our customers
+            %li created scripts to ensure a consistent development setup across company laptops (which <em>codifies our best practices</em>)
 
     %tr
       %td.company
@@ -193,13 +202,14 @@
         Speaker
         %aside.activity-details
           %ul
+            %li= link_to 'Berlin Open Data Day 2017: Wie wir Einschulungsbereiche in Berlin optimieren', 'https://projektzukunft.berlin.de/projekt-zukunft/projekt-zukunft-events/berlin-open-data-day-2017/'
+            %li= link_to 'Netzwerk Recherche Jahreskonferenz 2017: Machine Learning für Journalisten', 'https://nr17.sched.com/event/AHAe/limitierte-teilnahme-algorithmen-als-sparringspartner-in-der-datenanalyse-machine-learning-workshop-fur-journalisten?iframe=no'
             %li= link_to 'EKHN Symposium 2017: Data for Good Workshop', 'http://www.ekhn-stiftung.de/symposium2017/schuelerseminar'
             %li= link_to 'labtogether 2016: Panelist on effective altruism and workshop on data for good', 'http://www.labtogether.org/programm/'
             %li data2day 2016: Natural language processing with recurrent neural networks
             %li= link_to 'Pydata 2016: Functional Programming in Python', 'https://www.youtube.com/watch?v=r2eZ7lhqzNE'
             %li Strange Group Berlin: The Grammar of Graphics and R Metaprogramming
             %li= link_to 'Strange Group Berlin: Functional Javascript', 'http://kirelabs.org/fun-js'
-            %li Monster on Rails: Angular.js
     %tr
       %td.organisation Open Source
       %td.activity
@@ -273,18 +283,17 @@
       References
 
   %dl
+    %dt Dr. Paul von Bünau, CEO at idalab (#{link_to 'paul.buenau@idalab.de', 'mailto:paul.buenau@idalab.de'})
+    %dd is my boss at idalab.
+  %dl
     %dt Dr. Marco Blumendorf, CTO at smartB (#{link_to 'marco.blumendorf@smartb.eu', 'mailto:marco.blumendorf@smartb.eu'})
     %dd was my superviser at SmartB.
   %dl
-    %dt Peter Großkopf, CDO at Hitfox (#{link_to 'peter.grosskopf@hitfoxgroup.com', 'mailto:peter.grosskopf@hitfoxgroup.com'})
+    %dt Peter Großkopf, CTO at Solaris Bank (#{link_to 'peter.grosskopf@hitfoxgroup.com', 'mailto:peter.grosskopf@hitfoxgroup.com'})
     %dd was my superviser at Hitfox.
   %dl
     %dt Julian Schneider, CEO and Founder at Zweitag GmbH (#{link_to 'julian.schneider@zweitag.de', 'mailto:julian.schneider@zweitag.de'})
     %dd was my boss at Zweitag GmbH.
-  %dl
-    %dt
-      Prof. Dr. Xiaoyi Jiang (#{link_to 'http://cvpr.uni-muenster.de/organisation/jiang.html', 'http://cvpr.uni-muenster.de/organisation/jiang.html'})
-    %dd supervised my diploma thesis at University of Münster.
 
 %section#footer
   This CV was hand-crafted by Daniel Kirsch using #{link_to 'Middleman', 'http://middlemanapp.com/'}, #{link_to 'Bourbon NEAT', 'http://neat.bourbon.io/'} and #{link_to 'Font Awesome', 'http://fortawesome.github.io/Font-Awesome/'}. It is hosted on
