@@ -30,7 +30,7 @@ GEM
     eventmachine (1.2.3)
     execjs (1.4.1)
       multi_json (~> 1.0)
-    ffi (1.9.17)
+    ffi (1.15.5)
     font-awesome-middleman (4.5.0)
       middleman-core (~> 3.0)
     haml (4.0.7)
