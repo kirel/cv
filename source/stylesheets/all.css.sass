@@ -250,9 +250,11 @@ a
 // some print stuff
 @media print
   html, body
-    font-size: 76%
+    font-size: 77.5%
 
-  #abstract, #education, #experience table tr, #voluntary-experience, #interests, #references, #footer
+  #abstract, #education, #voluntary-experience, #interests, #references, #footer
+    page-break-inside: avoid
+  #experience table tr, td
     page-break-inside: avoid
   #footer
     display: none
