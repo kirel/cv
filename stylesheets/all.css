@@ -3436,12 +3436,16 @@ a {
 @media print {
   /* line 252, /Users/danielkirsch/code/cv/source/stylesheets/all.css.sass */
   html, body {
-    font-size: 76%; }
+    font-size: 77.5%; }
 
   /* line 255, /Users/danielkirsch/code/cv/source/stylesheets/all.css.sass */
-  #abstract, #education, #experience, #voluntary-experience, #interests, #references, #footer {
+  #abstract, #education, #voluntary-experience, #interests, #references, #footer {
     page-break-inside: avoid; }
 
   /* line 257, /Users/danielkirsch/code/cv/source/stylesheets/all.css.sass */
+  #experience table tr, td {
+    page-break-inside: avoid; }
+
+  /* line 259, /Users/danielkirsch/code/cv/source/stylesheets/all.css.sass */
   #footer {
     display: none; } }
