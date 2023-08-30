@@ -7,5 +7,8 @@ Develop
 
 Publish
 
+    git commit
+    git push
+    load_rbenv
     rake build
     rake publish
