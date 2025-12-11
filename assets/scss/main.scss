@@ -1,0 +1,419 @@
+// Import external libraries via npm
+@import "../../node_modules/normalize.css/normalize.css";
+
+// Bourbon and NEAT (simplified - using basic grid system instead)
+@import "bourbon-neat-mixins";
+
+// Variables
+$background-color: rgb(252,245,228);
+$font-color: rgb(11,42,53);
+$accent-color: rgb(191,88,44);
+$unobtrusive-color: rgb(91,109,116);
+$hint-color: $accent-color;
+$link-color: rgb(59,142,207);
+$link-visited-color: $link-color;
+
+// Breakpoints
+$mobile: 700px;
+$iphone: 380px;
+$phone: 525px;
+
+// Base styles
+html, body {
+  height: 100%;
+  font-size: 100%;
+}
+
+body {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem;
+  font-size: 1rem;
+  color: $font-color;
+  background: $background-color;
+  font-family: 'Exo 2', sans-serif;
+}
+
+h2, h3 {
+  color: $accent-color;
+}
+
+h3 {
+  font-size: 1.5rem;
+  text-transform: uppercase;
+}
+
+em {
+  font-style: normal;
+  font-weight: 400;
+  color: $hint-color;
+}
+
+a {
+  font-style: normal;
+  font-weight: 400;
+  color: $link-color;
+  text-decoration: none;
+  position: relative;
+
+  &:visited {
+    color: $link-visited-color;
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 0;
+    left: 50%;
+    border-bottom: 1px solid $link-color;
+    transition: all .2s ease-in-out;
+  }
+
+  &:hover::before {
+    width: 100%;
+    left: 0;
+  }
+}
+
+.unobtrusive-text {
+  font-weight: 200;
+  color: $unobtrusive-color;
+}
+
+// Container for header row with contact
+.header-row {
+  display: flex;
+  margin-bottom: 1rem;
+  align-items: flex-start;
+}
+
+.span-12 { width: 100%; padding: 0 1rem; }
+.span-9 { width: 75%; padding: 0 1rem; }
+.span-6 { width: 50%; padding: 0 1rem; }
+.span-3 { width: 25%; padding: 0 1rem; }
+
+@media (max-width: 700px) {
+  .span-9, .span-6, .span-3 { width: 100%; }
+}
+
+// Components
+#abstract, #education, #experience, #voluntary-experience, #interests, #references, #footer {
+  width: 100%;
+  padding: 0 1rem;
+}
+
+#header {
+  flex: 3;
+
+  @media (max-width: 700px) {
+    flex: 1;
+  }
+
+  &__name {
+    margin: 0;
+    font-size: 5rem;
+
+    @media (max-width: 525px) {
+      font-size: 3.5rem;
+    }
+
+    @media (max-width: 380px) {
+      font-size: 2.8rem;
+      text-align: center;
+    }
+  }
+
+  &__profession {
+    margin: 0;
+    @extend .unobtrusive-text;
+    font-size: 1.65rem;
+
+    @media (max-width: 525px) {
+      font-size: 1.15rem;
+    }
+
+    @media (max-width: 380px) {
+      text-align: center;
+    }
+  }
+}
+
+#contact {
+  flex: 1;
+  max-width: 300px;
+
+  @media (max-width: 700px) {
+    flex: 1;
+    max-width: 100%;
+  }
+
+  table {
+    float: right;
+    margin-top: 1rem;
+
+    @media (max-width: 700px) {
+      float: none;
+      margin-left: 1rem;
+    }
+
+    td:first-child {
+      width: 20px;
+      text-align: center;
+      padding: 4px;
+    }
+
+    @media (max-width: 380px) {
+      table, tr {
+        display: block;
+        text-align: center;
+      }
+
+      td {
+        display: inline;
+      }
+
+      width: initial;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+}
+
+#abstract p {
+  margin-top: 1.5rem;
+  font-weight: 200;
+  font-size: 1.3rem;
+
+  @media (max-width: 700px) {
+    font-size: 1.15rem;
+  }
+
+  @media (max-width: 380px) {
+    text-align: justify;
+  }
+}
+
+#experience, #voluntary-experience, #education {
+  td:first-child {
+    min-width: 160px;
+    width: 20%;
+    max-width: 15rem;
+
+    @media (max-width: 700px) {
+      max-width: inherit;
+    }
+
+    padding-right: 1rem;
+  }
+
+  td {
+    vertical-align: top;
+    padding-bottom: .5rem;
+  }
+}
+
+#education {
+  .period {
+    @extend .unobtrusive-text;
+  }
+
+  .school-details {
+    @extend .unobtrusive-text;
+  }
+}
+
+#experience, #voluntary-experience {
+  .period {
+    @extend .unobtrusive-text;
+  }
+
+  .company, .organisation {
+    font-weight: bold;
+
+    .period {
+      margin-top: 0.5rem;
+    }
+
+    .company-details, .organisation-details {
+      color: $unobtrusive-color;
+      font-weight: normal;
+      display: block;
+    }
+  }
+
+  .activity, .employment {
+    .employment-details, .activity-details {
+      @extend .unobtrusive-text;
+
+      h4 {
+        color: $font-color;
+        margin: .5rem 0 0 0;
+      }
+
+      .para {
+        margin: .5rem 0;
+      }
+
+      ul {
+        margin: 0 0 .2rem 0;
+      }
+    }
+
+    .chapter {
+      margin-bottom: .5rem;
+      list-style: none;
+
+      .title {
+        display: inline;
+      }
+
+      .period {
+        display: inline;
+        margin-left: 0rem;
+
+        &:before {
+          content: ' — ';
+        }
+      }
+    }
+  }
+}
+
+#references {
+  dd {
+    @extend .unobtrusive-text;
+  }
+}
+
+// Border effect
+#experience, #voluntary-experience, #education {
+  @media screen {
+    table {
+      margin-left: .6rem;
+    }
+
+    td {
+      @media (min-width: 526px) {
+        border-bottom: 1rem solid $background-color;
+      }
+    }
+
+    td:first-child {
+      padding-left: 1rem;
+      position: relative;
+
+      // left side bars
+      &::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        width: 0;
+        border-left: 1px solid $accent-color;
+        transition: all .2s ease-out;
+        top: 0;
+        height: 100%;
+
+        .no-touch & { // don't animate on touch devices
+          height: 0;
+          top: 50%;
+        }
+      }
+    }
+
+    tr:hover {
+      td:first-child {
+        &::before {
+          top: 0;
+          height: 100%;
+        }
+      }
+    }
+
+    // Narrow layout for phone
+    @media (max-width: 525px) {
+      table, tr, td {
+        display: block;
+      }
+
+      tr {
+        border-left: 1px solid $accent-color;
+        padding-left: 1rem;
+        margin-bottom: 1rem;
+      }
+
+      td:first-child {
+        border: none;
+        width: 100%;
+        padding-left: 0;
+
+        &::before {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+#interests {
+  #lists-wrapper {
+    margin: 16px 0;
+  }
+
+  ul {
+    margin: 0;
+    width: 50%;
+    padding: 0 1rem;
+
+    @media (max-width: 700px) {
+      width: 100%;
+      padding: 0 1rem;
+      &:nth-child(2n) {
+        margin-left: 0;
+      }
+    }
+
+    li {
+      list-style: none;
+
+      &:before {
+        content: '\25CF';
+        position: relative;
+        left: -1rem;
+      }
+    }
+  }
+
+  p {
+    width: 100%;
+    padding: 0 1rem;
+  }
+}
+
+#footer {
+  border-top: 1px solid $font-color;
+  margin: 1rem 0;
+  padding: 1rem;
+  font-size: .8rem;
+  text-align: center;
+  @extend .unobtrusive-text;
+}
+
+// Print styles
+@media print {
+  html, body {
+    font-size: 77.5%;
+  }
+
+  #abstract, #education, #voluntary-experience, #interests, #references, #footer {
+    page-break-inside: avoid;
+  }
+
+  #experience table tr, td {
+    page-break-inside: avoid;
+  }
+
+  #footer {
+    display: none;
+  }
+}

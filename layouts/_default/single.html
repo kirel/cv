@@ -1,0 +1,165 @@
+{{ define "main" }}
+{{ $cv := .Site.Data.cv }}
+{{ $education := .Site.Data.education }}
+{{ $experience := .Site.Data.experience }}
+{{ $voluntary := .Site.Data.voluntary }}
+{{ $interests := .Site.Data.interests }}
+{{ $references := .Site.Data.references }}
+
+<section id="header">
+  <h1 id="header__name">
+    <span>{{ $cv.name }}</span>
+  </h1>
+  <h2 id="header__profession">{{ $cv.profession }}</h2>
+</section>
+
+<section id="contact">
+  <table>
+    <tr class="web">
+      <td><i class="fa fa-globe"></i></td>
+      <td><a href="{{ $cv.website }}">{{ $cv.website }}</a></td>
+    </tr>
+    <tr class="mail">
+      <td><i class="fa fa-envelope"></i></td>
+      <td><a href="mailto:{{ $cv.email }}">{{ $cv.email }}</a></td>
+    </tr>
+    <tr class="phone">
+      <td><i class="fa fa-mobile"></i></td>
+      <td>{{ $cv.phone }}</td>
+    </tr>
+    <tr class="twitter">
+      <td><i class="fa-brands fa-twitter"></i></td>
+      <td><a href="{{ $cv.twitter_url }}">{{ $cv.twitter }}</a></td>
+    </tr>
+  </table>
+</section>
+
+<section id="abstract">
+  <p>{{ $cv.abstract | safeHTML }}</p>
+</section>
+
+<section id="education">
+  <h3><span><i class="fa fa-book"></i> Education</span></h3>
+  <table>
+    {{ range $education }}
+    <tr>
+      <td class="period">{{ .period }}</td>
+      <td class="school">
+        {{ .institution }}
+        <aside class="school-details">
+          {{ .degree }} ∅ {{ .grade }}
+          {{ if .thesis }}
+          <br>
+          Thesis ({{ .thesis.grade }}):
+          <a href="{{ .thesis.url | relURL }}">»{{ .thesis.title }}«</a>
+          <br>
+          {{ .thesis.description | safeHTML }}
+          {{ end }}
+        </aside>
+      </td>
+    </tr>
+    {{ end }}
+  </table>
+</section>
+
+<section id="experience">
+  <h3><span><i class="fa fa-clock"></i> Experience</span></h3>
+  <table>
+    {{ range $experience }}
+    <tr id="{{ .id }}">
+      <td class="company">
+        {{ .company }}
+        {{ if .company_type }}
+        <small class="company-details">{{ .company_type }}</small>
+        {{ end }}
+        {{ if .company_url }}
+        <small class="company-details"><a href="{{ .company_url }}">{{ .company_url }}</a></small>
+        {{ end }}
+        {{ if .company_description }}
+        <small class="company-details">{{ .company_description }}</small>
+        {{ end }}
+      </td>
+      <td class="employment">
+        {{ range .roles }}
+        <li class="chapter">
+          <div class="title">{{ .title }}</div>
+          <aside class="period">{{ .period }}</aside>
+          {{ if .description }}
+          <aside class="employment-details">{{ .description | safeHTML }}</aside>
+          {{ end }}
+        </li>
+        {{ end }}
+      </td>
+    </tr>
+    {{ end }}
+  </table>
+</section>
+
+<section id="voluntary-experience">
+  <h3><span><i class="fa fa-users"></i> Voluntary experience</span></h3>
+  <table>
+    {{ range $voluntary }}
+    <tr>
+      <td class="organisation">
+        {{ .organisation }}
+        {{ if .organisation_details }}
+        <small class="organisation-details">{{ .organisation_details }}</small>
+        {{ end }}
+        {{ if .period }}
+        <aside class="period">{{ .period }}</aside>
+        {{ end }}
+      </td>
+      <td class="activity">
+        {{ .role }}
+        {{ if .talks }}
+        <aside class="activity-details">
+          <ul>
+            {{ range .talks }}
+            <li>{{ if .url }}<a href="{{ .url }}">{{ .title }}</a>{{ else }}{{ .title }}{{ end }}</li>
+            {{ end }}
+          </ul>
+        </aside>
+        {{ else if .description }}
+        <aside class="activity-details">{{ .description | safeHTML }}</aside>
+        {{ end }}
+      </td>
+    </tr>
+    {{ end }}
+  </table>
+</section>
+
+<section id="interests">
+  <h3><span><i class="fa fa-flask"></i> Interests</span></h3>
+
+  <div id="lists-wrapper">
+    <ul>
+      {{ range $interests.interests }}
+      <li>{{ . }}</li>
+      {{ end }}
+    </ul>
+
+    <ul>
+      {{ range $interests.other_interests }}
+      <li>{{ . }}</li>
+      {{ end }}
+    </ul>
+  </div>
+
+  <p>
+    See <a href="{{ $interests.personal_projects_url }}">{{ $interests.personal_projects_url }}</a>
+    for personal projects.
+  </p>
+</section>
+
+<section id="references">
+  <h3><span><i class="fa fa-comments"></i> References</span></h3>
+  {{ $references.text }}
+</section>
+
+<section id="footer">
+  This CV was hand-crafted by {{ .Site.Params.author }} using <a href='http://middlemanapp.com/'>Middleman</a>, <a href='http://neat.bourbon.io/'>Bourbon NEAT</a> and <a href='http://fortawesome.github.io/Font-Awesome/'>Font Awesome</a>. It is hosted on
+  <i class="fa fa-github"></i> pages. The color scheme is derived from <a href='http://ethanschoonover.com/solarized'>solarized</a>.
+  <br>
+  Download the <a href="{{ "daniel-kirsch-cv.pdf" | relURL }}">PDF</a>.
+</section>
+{{ end }}

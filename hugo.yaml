@@ -1,0 +1,21 @@
+baseURL: https://danielkirs.ch/
+languageCode: en-us
+title: Daniel Kirsch
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+
+params:
+  description: "Curriculum Vitae of Daniel Kirsch"
+  author: "Daniel Kirsch"
+  keywords: ["CV", "resume", "data science", "machine learning"]
+  ga_tracking: "UA-8668142-7"
+
+assets:
+  JSCompression: none
+  CSSCompression: none
+
+build:
+  writeStats: true

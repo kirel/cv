@@ -1,0 +1,76 @@
+- organisation: "DSSG Berlin"
+  period: "12/2014 - present"
+  role: "Founder"
+  description: |
+    <em>Data Science for Social Good Berlin</em> is a pro bono intermediary for data science.
+    We help nonprofits move into the data age by running workshops and hackathons to help solve their data problems
+    thus connecting them to industry data scientists.
+    See
+    <a href='http://dssg-berlin.org/'>http://dssg-berlin.org/</a>
+    and
+    <a href='https://blog.dssg-berlin.org/'>https://blog.dssg-berlin.org/</a>
+    for more details.
+
+- organisation: "Open Knowledge Lab Münster"
+  organisation_details: "Code for Germany"
+  period: "2/2014 - 12/2014"
+  role: "Lab Lead"
+  description: |
+    in a local community revolving around <em>civic tech</em> and <em>open data</em>. See
+    <a href='http://codefor.de/muenster'>http://codefor.de/muenster</a>
+    for more details.
+    <h4>Responsibilities</h4>
+    <ul>
+      <li>Organize local meetups</li>
+      <li>Stay in touch with local government and journalists</li>
+      <li>Guide the participants towards common goals</li>
+    </ul>
+
+- organisation: "Meetups and Conferences"
+  role: "Speaker"
+  talks:
+    - title: "Berlin Open Data Day 2017: Wie wir Einschulungsbereiche in Berlin optimieren"
+      url: "https://projektzukunft.berlin.de/projekt-zukunft/projekt-zukunft-events/berlin-open-data-day-2017/"
+    - title: "Netzwerk Recherche Jahreskonferenz 2017: Machine Learning für Journalisten"
+      url: "https://nr17.sched.com/event/AHAe/limitierte-teilnahme-algorithmen-als-sparringspartner-in-der-datenanalyse-machine-learning-workshop-fur-journalisten?iframe=no"
+    - title: "EKHN Symposium 2017: Data for Good Workshop"
+      url: "http://www.ekhn-stiftung.de/symposium2017/schuelerseminar"
+    - title: "labtogether 2016: Panelist on effective altruism and workshop on data for good"
+      url: "http://www.labtogether.org/programm/"
+    - title: "data2day 2016: Natural language processing with recurrent neural networks"
+      url: ""
+    - title: "Pydata 2016: Functional Programming in Python"
+      url: "https://www.youtube.com/watch?v=r2eZ7lhqzNE"
+    - title: "Strange Group Berlin: The Grammar of Graphics and R Metaprogramming"
+      url: ""
+    - title: "Strange Group Berlin: Functional Javascript"
+      url: "http://kirelabs.org/fun-js"
+
+- organisation: "Open Source"
+  role: "Occasional contributor"
+  description: "See <a href='http://github.com/kirel'>http://github.com/kirel</a>."
+
+- organisation: "LG Brillux Münster"
+  period: "10/2011 - 5/2014"
+  role: "Track&Field Manager Young Athletics (Sportwart Nachwuchs)"
+  description: |
+    <h4>Responsibilities</h4>
+    <ul>
+      <li>Organisation and supervision of track&field competitions</li>
+      <li>Creation and implementation of young athletics nurturing programs</li>
+    </ul>
+
+- organisation: "TuS Hiltrup 1930 e.V."
+  period: "8/2006 - 5/2014"
+  role: "Track&field coach"
+  description: "Coaching young athletes between ages 12 to 19 especially in vertical jumps and <em>pole vault</em>. Earned several qualifications and final places in the German youth nationals."
+
+- organisation: "FLVW"
+  period: "8/2006"
+  role: "Track&field coaching license (C-Lizenz)"
+
+- organisation: "Heinrich-Tellen-Schule"
+  organisation_details: "in Warendorf"
+  period: "8/2002 - 6/2003"
+  role: "Community Service"
+  description: "at a school for special education."

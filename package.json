@@ -1,0 +1,25 @@
+{
+  "name": "cv",
+  "version": "1.0.0",
+  "description": "Develop",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kirel/cv.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/kirel/cv/issues"
+  },
+  "homepage": "https://github.com/kirel/cv#readme",
+  "devDependencies": {
+    "@fortawesome/fontawesome-free": "^7.1.0",
+    "sass": "^1.96.0"
+  }
+}

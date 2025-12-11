@@ -1,0 +1,119 @@
+- company: "Billie"
+  id: "billie"
+  company_type: "Fintech B2B Payments"
+  company_url: "http://www.billie.io"
+  company_description: "Billie is a breakthrough fintech startup that aims to create a new standard for business purchasing."
+  roles:
+    - title: "Director ML Platform"
+      period: "4/2023 - today"
+      description: "Unifying the ML Landscape at Billie and establishing MLOps best practices."
+
+    - title: "Director of Data Science"
+      period: "8/2020 - 4/2023"
+      description: |
+        I've started as a hands on data scientist at Billie working on the risk engines and later shifted focus
+        to ml-based internal products.
+        In this position at the end the leads of the teams that were responsible for
+        <ul>
+          <li><em>credit scoring models</em>,</li>
+          <li><em>fraud prevention systems</em>,</li>
+          <li><em>machine-learning</em> based <em>internal products</em> used in company identification, payment systems</li>
+          <li><em>products analytics</em></li>
+        </ul>
+        were reporting to me. My department had 14 full time employees plus working students. I was a driving force behind the <em>reshaping of
+        analytical teams</em> to accomodate shifting company requirements as Billie matured.
+
+    - title: "Data Science Lead"
+      period: "11/2019 - 7/2020"
+      description: ""
+
+    - title: "Data Scientist"
+      period: "4/2018 - 10/2019"
+      description: ""
+
+- company: "Idalab"
+  id: "idalab"
+  company_type: "Agency for Data Science"
+  company_url: "http://www.idalab.de"
+  roles:
+    - title: "Data Scientist"
+      period: "2/2016 - 2/2018"
+      description: |
+        <div class='para'>
+          <em>Mathematical Modelling</em>, <em>Machine Learning</em>, <em>Artificial Intelligence</em>, <em>Optimization</em><br/>
+          in a wide range of contexts like IoT, urban planning, finance, mobility, and many more using Python, Pandas, scikit-learn, keras,
+          R and the tidyverse, caret, Shiny, Docker, Elasticsearch, Ansible, AWS (whatever is the right tool for the job).</br>
+        </div>
+        <div class='para'>
+          I also
+          <ul>
+            <li><em>mentored</em> working students and younger colleagues</li>
+            <li>have established <em>reproducible research</em> principles in our projects (codified in project templates)</li>
+            <li>created an <em>infrastructure for my colleagues</em> to easily run analyses in pre-configured cloud environments</li>
+            <li>created a Docker-based infrastructure to make our web based demonstrator apps available to our customers</li>
+            <li>created scripts to ensure a consistent development setup across company laptops (which <em>codified our best practices</em>)</li>
+          </ul>
+        </div>
+
+- company: "Freelancer"
+  roles:
+    - title: "Mathematician"
+      period: "4/2015 - 1/2016"
+      description: |
+        <ul>
+          <li>Reduction of food waste through <em>predictive modeling</em> of <em>time series</em> fo a german vending machine business with <em>scikit-learn</em></li>
+          <li><em>Statistical consulting</em> and predictive modeling for in financial services (dunning processes) with <em>R</em></li>
+          <li>Supported development of a <em>machine learning</em> API for a Berlin-based parking app startup</li>
+        </ul>
+
+- company: "smartB"
+  company_type: "Energy Management GmbH"
+  roles:
+    - title: "Data Analyst & Visualization Expert"
+      period: "8/2014 - 3/2015"
+      description: |
+        <ul>
+          <li>Translation of <em>business requirements</em> into suitable technical solutions</li>
+          <li>Leading frontend development (<em>Project Management</em>, <em>Node</em>, <em>D3</em>, <em>Angular</em>) and building APIs and the data pipeline (<em>Python</em>, <em>Pandas</em>) for our smart meters and <em>NILM</em> results</li>
+          <li>Drafting and implementing a DevOps process and best practices with <em>Ansible</em></li>
+        </ul>
+
+- company: "Hitfox Group"
+  company_type: "Incubator building companies and careers"
+  roles:
+    - title: "Data Scientist"
+      period: "6/2014 - 7/2014"
+      description: |
+        <ul>
+          <li>Prototyped a <em>Big Data</em> architecture in a <em>Telco</em> context</li>
+          <li>Supported a new <em>FinTech</em> venture by prototyping the backend architecture and implementing the <em>MVP</em> with <em>Rails</em></li>
+        </ul>
+
+- company: "Zweitag GmbH"
+  company_type: "Ruby on Rails Consultancy"
+  roles:
+    - title: "Software Developer"
+      period: "8/2009 - 5/2014"
+      description: |
+        I was involved in a variety of projects ranging from ecommerce sites and auction systems to business intelligence tools. I worked on the <em>Rails</em> backend as well as with frontend technologies such as <em>Haml</em>, <em>SASS</em>, client-side <em>Javascript</em>-frameworks and <em>D3.js</em> for data visualization. I helped establish <em>TDD/BDD</em> as a company best-practice, intoduced new technology such as <em>Angular.js</em> as a core Zweitag technology and supported and co-created the corporate <em>mentorship</em> program besides mentoring student workers and interns.
+
+- company: "Visualization and Computer Graphics Research Group"
+  company_type: "of the University of Münster"
+  roles:
+    - title: "Student worker: Voreen Volume Rendering Engine"
+      period: "10/2008 - 3/2009"
+      description: "Worked on the medical imaging engine Voreen in <em>C++</em> and <em>OpenGL</em>."
+
+- company: "Databases and Information Systems Group"
+  company_type: "of the University of Münster"
+  roles:
+    - title: "Student worker: Project Learnr"
+      period: "11/2008 - 3/2009"
+      description: "Built a <em>REST</em>ful webservice for managing assets for an E-Learning platform using <em>Ruby on Rails</em>."
+
+- company: "Institute of Mathematical Statistics"
+  company_type: "of the University of Münster"
+  roles:
+    - title: "Tutor in stochastics / probability theory"
+      period: "10/2007 - 10/2008"
+      description: "Tutorials and correction of student homework."
