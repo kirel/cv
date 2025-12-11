@@ -399,10 +399,54 @@ a {
   @extend .unobtrusive-text;
 }
 
-// Print styles
+// Print styles - Black and white with orange accents
 @media print {
   html, body {
     font-size: 77.5%;
+    background: white !important;
+    color: black !important;
+  }
+
+  // Override background colors for print
+  body {
+    background: white !important;
+  }
+
+  #header, #contact, #abstract, #education, #experience,
+  #voluntary-experience, #interests, #references, #footer {
+    background: white !important;
+  }
+
+  // Headers and emphasized text use accent color
+  h3, em {
+    color: $accent-color !important;
+  }
+
+  // Links in print
+  a {
+    color: black !important;
+    text-decoration: none;
+  }
+
+  // Section headers
+  h3 {
+    color: $accent-color !important;
+  }
+
+  // Remove hover effects
+  a::before {
+    display: none;
+  }
+
+  // Keep borders for structure
+  #experience, #voluntary-experience, #education {
+    td:first-child {
+      border-left: 1px solid $accent-color !important;
+    }
+
+    tr:hover td:first-child::before {
+      display: block;
+    }
   }
 
   #abstract, #education, #voluntary-experience, #interests, #references, #footer {
