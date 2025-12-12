@@ -6,7 +6,14 @@
   roles:
     - title: "Director ML Platform"
       period: "4/2023 - today"
-      description: "Unifying the ML Landscape at Billie and establishing MLOps best practices."
+      description: |
+        Unifying the ML Landscape at Billie and establishing MLOps best practices.
+        <ul>
+          <li>Rewrote the batch feature store to make it simpler and more robust.</li>
+          <li>Rewrote the fraud ingestion and pipelines on the basis of Metaflow to be cloud-native.</li>
+          <li>Added content-based caching mechanism to Metaflow.</li>
+          <li>Hosted the first Gen AI Show & Tell for developer productivity to push the company's AI literacy.</li>
+        </ul>
 
     - title: "Director of Data Science"
       period: "8/2020 - 4/2023"
