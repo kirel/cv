@@ -402,7 +402,7 @@ a {
 // Print styles - Black and white with orange accents
 @media print {
   html, body {
-    font-size: 77.5%;
+    font-size: 90%;
     background: white !important;
     color: black !important;
   }
@@ -410,6 +410,8 @@ a {
   // Override background colors for print
   body {
     background: white !important;
+    padding: 0;
+    max-width: none;
   }
 
   #header, #contact, #abstract, #education, #experience,
@@ -417,8 +419,50 @@ a {
     background: white !important;
   }
 
+  // Header row layout for print
+  .header-row {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  #header {
+    padding-left: 1rem;
+  }
+
+  #contact {
+    font-size: 0.7em;
+
+    table {
+      float: right;
+    }
+  }
+
+  // Header styling for print
+  #header__name {
+    font-size: 4rem;
+  }
+
+  #header__profession {
+    font-size: 1.3rem;
+  }
+
+  // Abstract styling
+  #abstract p {
+    font-size: 1rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  // Section headers
+  h3 {
+    color: $accent-color !important;
+    font-size: 1.2rem;
+    margin-top: 1.2rem;
+    margin-bottom: 0.8rem;
+  }
+
   // Headers and emphasized text use accent color
-  h3, em {
+  em {
     color: $accent-color !important;
   }
 
@@ -428,20 +472,25 @@ a {
     text-decoration: none;
   }
 
-  // Section headers
-  h3 {
-    color: $accent-color !important;
-  }
-
   // Remove hover effects
   a::before {
     display: none;
   }
 
-  // Keep borders for structure
+  // Table spacing
   #experience, #voluntary-experience, #education {
+    table {
+      border-collapse: separate;
+      border-spacing: 0 0.6rem;
+    }
+
+    td {
+      padding-bottom: 0.5rem;
+    }
+
     td:first-child {
       border-left: 1px solid $accent-color !important;
+      padding-left: 0.8rem;
     }
 
     tr:hover td:first-child::before {
@@ -449,15 +498,30 @@ a {
     }
   }
 
-  #abstract, #education, #voluntary-experience, #interests, #references, #footer {
-    page-break-inside: avoid;
+  // Page break controls - minimize orphan breaks
+  #abstract, #education, #interests, #references {
+    break-inside: avoid;
   }
 
-  #experience table tr, td {
-    page-break-inside: avoid;
+  #experience table tr,
+  #voluntary-experience table tr,
+  #education table tr {
+    break-inside: avoid;
+  }
+
+  // Keep sections together where possible
+  h3 {
+    break-after: avoid;
   }
 
   #footer {
     display: none;
+  }
+
+  // Interests section
+  #interests {
+    ul {
+      margin-bottom: 0.5rem;
+    }
   }
 }
