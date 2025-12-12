@@ -9,6 +9,7 @@ Gemfile.lock
 /public
 /resources/_gen
 .hugo_build.lock
+hugo_stats.json
 
 # Sass' cache
 /.sass-cache
