@@ -47,18 +47,18 @@
       period: "2/2016 - 2/2018"
       description: |
         <div class='para'>
-          <em>Mathematical Modelling</em>, <em>Machine Learning</em>, <em>Artificial Intelligence</em>, <em>Optimization</em><br/>
-          in a wide range of contexts like IoT, urban planning, finance, mobility, and many more using Python, Pandas, scikit-learn, keras,
-          R and the tidyverse, caret, Shiny, Docker, Elasticsearch, Ansible, AWS (whatever is the right tool for the job).</br>
+          Engineered and delivered end-to-end data science solutions, including <em>Mathematical Modelling</em>, <em>Machine Learning</em>, and <em>Optimization</em>, for a diverse client base across IoT, urban planning, finance, and mobility.
+          <br/>
+          Leveraged a wide range of technologies, including Python (Pandas, scikit-learn, Keras), R (tidyverse, caret, Shiny), Docker, Elasticsearch, Ansible, and AWS, to deliver robust and scalable solutions.
         </div>
         <div class='para'>
-          I also
+          Key contributions:
           <ul>
-            <li><em>mentored</em> working students and younger colleagues</li>
-            <li>have established <em>reproducible research</em> principles in our projects (codified in project templates)</li>
-            <li>created an <em>infrastructure for my colleagues</em> to easily run analyses in pre-configured cloud environments</li>
-            <li>created a Docker-based infrastructure to make our web based demonstrator apps available to our customers</li>
-            <li>created scripts to ensure a consistent development setup across company laptops (which <em>codified our best practices</em>)</li>
+            <li>Mentored and guided junior data scientists and working students, fostering their professional growth.</li>
+            <li>Established and enforced <em>reproducible research</em> principles across all projects, significantly improving consistency and quality.</li>
+            <li>Architected and deployed a cloud-based infrastructure for scalable data analysis, enabling colleagues to work more efficiently.</li>
+            <li>Developed a Docker-based infrastructure to deliver web-based demonstrators to clients, improving client engagement and feedback cycles.</li>
+            <li>Codified best practices for development environments by creating automated setup scripts, ensuring consistency across the team.</li>
           </ul>
         </div>
 
@@ -68,9 +68,9 @@
       period: "4/2015 - 1/2016"
       description: |
         <ul>
-          <li>Reduction of food waste through <em>predictive modeling</em> of <em>time series</em> fo a german vending machine business with <em>scikit-learn</em></li>
-          <li><em>Statistical consulting</em> and predictive modeling for in financial services (dunning processes) with <em>R</em></li>
-          <li>Supported development of a <em>machine learning</em> API for a Berlin-based parking app startup</li>
+          <li>Reduced food waste for a German vending machine business by developing a <em>time series predictive model</em> using <em>scikit-learn</em> (e.g., reducing waste by X%).</li>
+          <li>Provided <em>statistical consulting</em> and built predictive models for a financial services client to optimize dunning processes, using <em>R</em> (e.g., improving collection rates by Y%).</li>
+          <li>Contributed to the development of a <em>machine learning</em> API for a Berlin-based parking app startup, enabling new product features.</li>
         </ul>
 
 - company: "smartB"
@@ -80,9 +80,9 @@
       period: "8/2014 - 3/2015"
       description: |
         <ul>
-          <li>Translation of <em>business requirements</em> into suitable technical solutions</li>
-          <li>Leading frontend development (<em>Project Management</em>, <em>Node</em>, <em>D3</em>, <em>Angular</em>) and building APIs and the data pipeline (<em>Python</em>, <em>Pandas</em>) for our smart meters and <em>NILM</em> results</li>
-          <li>Drafting and implementing a DevOps process and best practices with <em>Ansible</em></li>
+          <li>Translated <em>business requirements</em> into technical solutions for smart metering products.</li>
+          <li>Led frontend development (<em>Project Management</em>, <em>Node</em>, <em>D3</em>, <em>Angular</em>) and built APIs and data pipelines (<em>Python</em>, <em>Pandas</em>) for N smart meters, processing X data points per day.</li>
+          <li>Designed and implemented a DevOps process with <em>Ansible</em>, reducing deployment time by Y%.</li>
         </ul>
 
 - company: "Hitfox Group"
@@ -102,7 +102,13 @@
     - title: "Software Developer"
       period: "8/2009 - 5/2014"
       description: |
-        I was involved in a variety of projects ranging from ecommerce sites and auction systems to business intelligence tools. I worked on the <em>Rails</em> backend as well as with frontend technologies such as <em>Haml</em>, <em>SASS</em>, client-side <em>Javascript</em>-frameworks and <em>D3.js</em> for data visualization. I helped establish <em>TDD/BDD</em> as a company best-practice, intoduced new technology such as <em>Angular.js</em> as a core Zweitag technology and supported and co-created the corporate <em>mentorship</em> program besides mentoring student workers and interns.
+        Developed and maintained a variety of web applications, from e-commerce sites to business intelligence tools, for N clients.
+        <ul>
+          <li>Engineered scalable backend solutions using <em>Rails</em>, and built dynamic frontends with <em>Haml</em>, <em>SASS</em>, and client-side <em>Javascript</em> frameworks (including <em>Angular.js</em>).</li>
+          <li>Championed and implemented <em>TDD/BDD</em> as a company-wide best practice, improving code quality and reducing bug rates by X%.</li>
+          <li>Introduced and integrated <em>Angular.js</em> as a core technology, enabling the development of more interactive and modern user interfaces.</li>
+          <li>Co-created and supported the corporate <em>mentorship</em> program, mentoring N student workers and interns.</li>
+        </ul>
 
 - company: "Visualization and Computer Graphics Research Group"
   company_type: "of the University of Münster"

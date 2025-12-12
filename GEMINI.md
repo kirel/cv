@@ -60,3 +60,11 @@ The generated PDF will be located at `static/daniel-kirsch-cv.pdf`.
 - `assets/scss/`: This directory contains the SCSS files for styling the website.
 - `static/`: This directory contains static assets like images and PDFs.
 - `scripts/generate-pdf.js`: The script used to generate the PDF version of the CV.
+
+# Technology Stack
+
+- **Static Site Generator**: Hugo
+- **Styling**: SCSS with Hugo Pipes
+- **Icons**: Font Awesome
+- **Fonts**: Google Fonts
+- **Deployment**: GitHub Pages via GitHub Actions

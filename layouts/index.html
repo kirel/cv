@@ -5,6 +5,7 @@
 {{ $voluntary := .Site.Data.voluntary }}
 {{ $interests := .Site.Data.interests }}
 {{ $references := .Site.Data.references }}
+{{ $skills := .Site.Data.skills }}
 
 <div class="container header-row">
 <section id="header">
@@ -151,6 +152,34 @@
     See <a href="{{ $interests.personal_projects_url }}">{{ $interests.personal_projects_url }}</a>
     for personal projects.
   </p>
+</section>
+
+<section id="skills">
+  <h3><span><i class="fa fa-code"></i> Skills</span></h3>
+  <h4>Languages</h4>
+  <div id="lists-wrapper">
+    <ul>
+      {{ range $skills.languages }}
+      <li>{{ .name }} ({{ .level }})</li>
+      {{ end }}
+    </ul>
+  </div>
+  <h4>Technologies</h4>
+  <div id="lists-wrapper">
+    <ul>
+      {{ range $skills.technologies }}
+      <li>{{ .name }}</li>
+      {{ end }}
+    </ul>
+  </div>
+  <h4>Methodologies</h4>
+  <div id="lists-wrapper">
+    <ul>
+      {{ range $skills.methodologies }}
+      <li>{{ . }}</li>
+      {{ end }}
+    </ul>
+  </div>
 </section>
 
 <section id="references">
