@@ -11,6 +11,16 @@ $link-color: rgb(59,142,207);
 $link-visited-color: $link-color;
 $main-padding: 1rem;
 
+// Solarized Colors
+$solar-yellow:  #b58900;
+$solar-orange:  #cb4b16;
+$solar-red:     #dc322f;
+$solar-magenta: #d33682;
+$solar-violet:  #6c71c4;
+$solar-blue:    #268bd2;
+$solar-cyan:    #2aa198;
+$solar-green:   #859900;
+
 // Breakpoints
 $mobile: 700px;
 $iphone: 380px;
@@ -82,6 +92,28 @@ a {
 // Layout sections
 #abstract, #education, #experience, #voluntary-experience, #interests, #skills, #references, #footer {
   padding: 0 $main-padding;
+
+  // Unified list styles for all sections
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    li {
+      position: relative;
+      padding-left: 1rem; // Reduced space for the bullet
+      margin-bottom: 0.2rem;
+
+      &:before {
+        content: '\25CF';
+        color: $font-color;
+        position: absolute;
+        left: 0;
+        top: 0;
+        line-height: inherit;
+      }
+    }
+  }
 }
 
 // Container for header row with contact
@@ -191,6 +223,7 @@ a {
   gap: $main-padding;
   position: relative;
   padding-bottom: .5rem; // Keep some vertical separation between rows
+  padding-left: $main-padding;
 
   @media (max-width: $phone) {
     grid-template-columns: 1fr;
@@ -291,36 +324,67 @@ a {
 }
 
 #skills {
-  #lists-wrapper {
+  .skills-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 1rem;
-    margin: 16px 0;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
 
-    // Adjust for three columns on wider screens
-    @media (min-width: 900px) { // Arbitrary breakpoint for 3 columns
-      grid-template-columns: repeat(3, 1fr);
-    }
-    @media (max-width: 899px) and (min-width: $mobile) { // Adjust for 2 columns
-      grid-template-columns: repeat(2, 1fr);
-    }
-    @media (max-width: $mobile - 1) { // Single column on small screens
+    @media (max-width: $mobile) {
       grid-template-columns: 1fr;
+      gap: 1rem;
     }
   }
 
-  ul {
-    margin: 0;
-    padding: 0 1rem;
-
+  // Ensure all lists in skills grid use the same base styling
+  .skill-group ul {
+    // This will inherit from unified styles but let's be explicit if needed
     li {
-      list-style: none;
-
-      &:before {
-        content: '\25CF';
-        position: relative;
-        left: -1rem;
+      // already has position: relative and padding-left: 1rem from unified styles
+      
+      &.language-item {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 0.5rem;
+        
+        // Adjust for the absolute bullet from unified style
+        // The span needs to stay clear of the bullet at padding-left: 1rem
+        
+        span:first-of-type {
+          font-weight: 500;
+          width: 90px;
+          display: inline-block;
+        }
       }
+    }
+  }
+
+  .language-list {
+    .language-level {
+      font-size: 0.8rem;
+      cursor: help;
+      transition: transform 0.2s ease-in-out;
+      display: inline-flex;
+      align-items: center;
+
+      &:hover {
+         transform: scale(1.1);
+      }
+      
+      i {
+        margin-left: 2px;
+      }
+    }
+
+    // Color coding for skill levels
+    .language-level[title="Expert"] {
+      color: $solar-magenta;
+    }
+    .language-level[title="Advanced"] {
+      color: $solar-violet;
+    }
+    .language-level[title="Intermediate"] {
+      color: $solar-blue;
     }
   }
 }
@@ -335,21 +399,6 @@ a {
 
     @media (max-width: $mobile) {
       grid-template-columns: 1fr;
-    }
-  }
-
-  ul {
-    margin: 0;
-    padding: 0 1rem;
-
-    li {
-      list-style: none;
-
-      &:before {
-        content: '\25CF';
-        position: relative;
-        left: -1rem;
-      }
     }
   }
 

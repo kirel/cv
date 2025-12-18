@@ -156,29 +156,42 @@
 
 <section id="skills">
   <h3><span><i class="fa fa-code"></i> Skills</span></h3>
-  <h4>Languages</h4>
-  <div id="lists-wrapper">
-    <ul>
-      {{ range $skills.languages }}
-      <li>{{ .name }} ({{ .level }})</li>
-      {{ end }}
-    </ul>
-  </div>
-  <h4>Technologies</h4>
-  <div id="lists-wrapper">
-    <ul>
-      {{ range $skills.technologies }}
-      <li>{{ .name }}</li>
-      {{ end }}
-    </ul>
-  </div>
-  <h4>Methodologies</h4>
-  <div id="lists-wrapper">
-    <ul>
-      {{ range $skills.methodologies }}
-      <li>{{ . }}</li>
-      {{ end }}
-    </ul>
+  <div class="skills-grid">
+    <div class="skill-group">
+      <h4>Languages</h4>
+      <ul class="language-list">
+        {{ range $skills.languages }}
+        <li class="language-item">
+          <span>{{ .name }}</span>
+          <span class="language-level" title="{{ .level }}">
+            {{ if eq .level "Expert" }}
+              <i class="fas fa-circle"></i><i class="fas fa-circle"></i><i class="fas fa-circle"></i>
+            {{ else if eq .level "Advanced" }}
+              <i class="fas fa-circle"></i><i class="fas fa-circle"></i><i class="far fa-circle"></i>
+            {{ else }}
+              <i class="fas fa-circle"></i><i class="far fa-circle"></i><i class="far fa-circle"></i>
+            {{ end }}
+          </span>
+        </li>
+        {{ end }}
+      </ul>
+    </div>
+    <div class="skill-group">
+      <h4>Technologies</h4>
+      <ul>
+        {{ range $skills.technologies }}
+        <li>{{ .name }}</li>
+        {{ end }}
+      </ul>
+    </div>
+    <div class="skill-group">
+      <h4>Methodologies</h4>
+      <ul>
+        {{ range $skills.methodologies }}
+        <li>{{ . }}</li>
+        {{ end }}
+      </ul>
+    </div>
   </div>
 </section>
 
