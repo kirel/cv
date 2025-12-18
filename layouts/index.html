@@ -16,24 +16,24 @@
 </section>
 
 <section id="contact">
-  <table>
-    <tr class="web">
-      <td><i class="fa fa-globe"></i></td>
-      <td><a href="{{ $cv.website }}">{{ $cv.website }}</a></td>
-    </tr>
-    <tr class="mail">
-      <td><i class="fa fa-envelope"></i></td>
-      <td><a href="mailto:{{ $cv.email }}">{{ $cv.email }}</a></td>
-    </tr>
-    <tr class="phone">
-      <td><i class="fa fa-mobile"></i></td>
-      <td>{{ $cv.phone }}</td>
-    </tr>
-    <tr class="twitter">
-      <td><i class="fa-brands fa-twitter"></i></td>
-      <td><a href="{{ $cv.twitter_url }}">{{ $cv.twitter }}</a></td>
-    </tr>
-  </table>
+  <div class="grid-contact">
+    <div class="contact-item web">
+      <i class="fa fa-globe"></i>
+      <a href="{{ $cv.website }}">{{ $cv.website }}</a>
+    </div>
+    <div class="contact-item mail">
+      <i class="fa fa-envelope"></i>
+      <a href="mailto:{{ $cv.email }}">{{ $cv.email }}</a>
+    </div>
+    <div class="contact-item phone">
+      <i class="fa fa-mobile"></i>
+      <span>{{ $cv.phone }}</span>
+    </div>
+    <div class="contact-item twitter">
+      <i class="fa-brands fa-twitter"></i>
+      <a href="{{ $cv.twitter_url }}">{{ $cv.twitter }}</a>
+    </div>
+  </div>
 </section>
 </div>
 
@@ -43,11 +43,11 @@
 
 <section id="education">
   <h3><span><i class="fa fa-book"></i> Education</span></h3>
-  <table>
+  <div class="grid-container">
     {{ range $education }}
-    <tr>
-      <td class="period">{{ .period }}</td>
-      <td class="school">
+    <div class="item-row">
+      <div class="item-column time-column period">{{ .period }}</div>
+      <div class="item-column details-column school">
         {{ .institution }}
         <aside class="school-details">
           {{ .degree }} ∅ {{ .grade }}
@@ -59,18 +59,18 @@
           {{ .thesis.description | safeHTML }}
           {{ end }}
         </aside>
-      </td>
-    </tr>
+      </div>
+    </div>
     {{ end }}
-  </table>
+  </div>
 </section>
 
 <section id="experience">
   <h3><span><i class="fa fa-clock"></i> Experience</span></h3>
-  <table>
+  <div class="grid-container">
     {{ range $experience }}
-    <tr id="{{ .id }}">
-      <td class="company">
+    <div class="item-row" id="{{ .id }}">
+      <div class="item-column time-column company">
         {{ .company }}
         {{ if .company_type }}
         <small class="company-details">{{ .company_type }}</small>
@@ -81,8 +81,8 @@
         {{ if .company_description }}
         <small class="company-details">{{ .company_description }}</small>
         {{ end }}
-      </td>
-      <td class="employment">
+      </div>
+      <div class="item-column details-column employment">
         {{ range .roles }}
         <li class="chapter">
           <div class="title">{{ .title }}</div>
@@ -92,18 +92,18 @@
           {{ end }}
         </li>
         {{ end }}
-      </td>
-    </tr>
+      </div>
+    </div>
     {{ end }}
-  </table>
+  </div>
 </section>
 
 <section id="voluntary-experience">
   <h3><span><i class="fa fa-users"></i> Voluntary experience</span></h3>
-  <table>
+  <div class="grid-container">
     {{ range $voluntary }}
-    <tr>
-      <td class="organisation">
+    <div class="item-row">
+      <div class="item-column time-column organisation">
         {{ .organisation }}
         {{ if .organisation_details }}
         <small class="organisation-details">{{ .organisation_details }}</small>
@@ -111,8 +111,8 @@
         {{ if .period }}
         <aside class="period">{{ .period }}</aside>
         {{ end }}
-      </td>
-      <td class="activity">
+      </div>
+      <div class="item-column details-column activity">
         {{ .role }}
         {{ if .talks }}
         <aside class="activity-details">
@@ -125,10 +125,10 @@
         {{ else if .description }}
         <aside class="activity-details">{{ .description | safeHTML }}</aside>
         {{ end }}
-      </td>
-    </tr>
+      </div>
+    </div>
     {{ end }}
-  </table>
+  </div>
 </section>
 
 <section id="interests">

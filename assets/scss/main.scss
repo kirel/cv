@@ -1,9 +1,6 @@
 // Import external libraries via npm
 @import "../../node_modules/normalize.css/normalize.css";
 
-// Bourbon and NEAT (simplified - using basic grid system instead)
-@import "bourbon-neat-mixins";
-
 // Variables
 $background-color: rgb(252,245,228);
 $font-color: rgb(11,42,53);
@@ -12,6 +9,7 @@ $unobtrusive-color: rgb(91,109,116);
 $hint-color: $accent-color;
 $link-color: rgb(59,142,207);
 $link-visited-color: $link-color;
+$main-padding: 1rem;
 
 // Breakpoints
 $mobile: 700px;
@@ -27,7 +25,7 @@ html, body {
 body {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 1rem;
+  padding: $main-padding;
   font-size: 1rem;
   color: $font-color;
   background: $background-color;
@@ -81,46 +79,41 @@ a {
   color: $unobtrusive-color;
 }
 
+// Layout sections
+#abstract, #education, #experience, #voluntary-experience, #interests, #skills, #references, #footer {
+  padding: 0 $main-padding;
+}
+
 // Container for header row with contact
-.header-row {
-  display: flex;
+.container.header-row {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  gap: $main-padding;
   margin-bottom: 1rem;
-  align-items: flex-start;
+  align-items: start;
+
+  @media (max-width: $mobile) {
+    grid-template-columns: 1fr;
+  }
 }
 
-.span-12 { width: 100%; padding: 0 1rem; }
-.span-9 { width: 75%; padding: 0 1rem; }
-.span-6 { width: 50%; padding: 0 1rem; }
-.span-3 { width: 25%; padding: 0 1rem; }
-
-@media (max-width: 700px) {
-  .span-9, .span-6, .span-3 { width: 100%; }
-}
 
 // Components
-#abstract, #education, #experience, #voluntary-experience, #interests, #references, #footer {
-  width: 100%;
-  padding: 0 1rem;
-}
-
 #header {
-  flex: 3;
-
-  @media (max-width: 700px) {
-    flex: 1;
-  }
-
+  // Removed padding: 0; from #header as it caused alignment issues.
   &__name {
     margin: 0;
     font-size: 5rem;
+    padding-left: $main-padding; // Ensure consistent left padding
 
-    @media (max-width: 525px) {
+    @media (max-width: $phone) {
       font-size: 3.5rem;
+      text-align: center;
+      padding-left: 0; // Center text on smaller screens
     }
 
-    @media (max-width: 380px) {
+    @media (max-width: $iphone) {
       font-size: 2.8rem;
-      text-align: center;
     }
   }
 
@@ -128,54 +121,46 @@ a {
     margin: 0;
     @extend .unobtrusive-text;
     font-size: 1.65rem;
+    padding-left: $main-padding; // Ensure consistent left padding
 
-    @media (max-width: 525px) {
+    @media (max-width: $phone) {
       font-size: 1.15rem;
+      text-align: center;
+      padding-left: 0; // Center text on smaller screens
     }
 
-    @media (max-width: 380px) {
+    @media (max-width: $iphone) {
       text-align: center;
     }
   }
 }
 
 #contact {
-  flex: 1;
-  max-width: 300px;
-
-  @media (max-width: 700px) {
-    flex: 1;
-    max-width: 100%;
-  }
-
-  table {
-    float: right;
+  padding: 0 $main-padding; // Consistent padding
+  .grid-contact {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: end; // Align items to the end of the grid cell
     margin-top: 1rem;
 
-    @media (max-width: 700px) {
-      float: none;
-      margin-left: 1rem;
+    @media (max-width: $mobile) {
+      justify-items: start; // Align items to the start on mobile
+      margin-left: 0;
     }
 
-    td:first-child {
-      width: 20px;
+    @media (max-width: $iphone) {
+      justify-items: center; // Center items on small phones
+    }
+  }
+
+  .contact-item {
+    display: grid;
+    grid-template-columns: 20px auto;
+    gap: 4px;
+    padding: 4px 0;
+
+    i {
       text-align: center;
-      padding: 4px;
-    }
-
-    @media (max-width: 380px) {
-      table, tr {
-        display: block;
-        text-align: center;
-      }
-
-      td {
-        display: inline;
-      }
-
-      width: initial;
-      margin-left: auto;
-      margin-right: auto;
     }
   }
 }
@@ -185,52 +170,77 @@ a {
   font-weight: 200;
   font-size: 1.3rem;
 
-  @media (max-width: 700px) {
+  @media (max-width: $mobile) {
     font-size: 1.15rem;
   }
 
-  @media (max-width: 380px) {
+  @media (max-width: $iphone) {
     text-align: justify;
   }
 }
 
-#experience, #voluntary-experience, #education {
-  td:first-child {
-    min-width: 160px;
-    width: 20%;
-    max-width: 15rem;
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem; // vertical gap between rows
+}
 
-    @media (max-width: 700px) {
+.item-row {
+  display: grid;
+  grid-template-columns: 160px 1fr;
+  gap: $main-padding;
+  position: relative;
+  padding-bottom: .5rem; // Keep some vertical separation between rows
+
+  @media (max-width: $phone) {
+    grid-template-columns: 1fr;
+    gap: .5rem;
+    border-left: 1px solid $accent-color;
+    padding-left: $main-padding;
+    margin-bottom: 1rem;
+    padding-bottom: 0; // No extra padding bottom when collapsed
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 1px;
+    height: 0;
+    background-color: $accent-color;
+    transition: all .2s ease-out;
+  }
+
+  &:hover::before {
+    height: 100%;
+  }
+
+  @media (max-width: $phone) {
+    &::before {
+      display: none;
+    }
+  }
+}
+
+.item-column {
+  &.time-column {
+    min-width: 160px;
+    max-width: 15rem;
+    font-weight: bold;
+
+    @media (max-width: $mobile) {
       max-width: inherit;
     }
-
-    padding-right: 1rem;
-  }
-
-  td {
-    vertical-align: top;
-    padding-bottom: .5rem;
   }
 }
 
-#education {
-  .period {
-    @extend .unobtrusive-text;
-  }
-
-  .school-details {
-    @extend .unobtrusive-text;
-  }
-}
-
-#experience, #voluntary-experience {
-  .period {
+#education, #experience, #voluntary-experience {
+  .school-details, .period {
     @extend .unobtrusive-text;
   }
 
   .company, .organisation {
-    font-weight: bold;
-
     .period {
       margin-top: 0.5rem;
     }
@@ -280,98 +290,57 @@ a {
   }
 }
 
-#references {
-  dd {
-    @extend .unobtrusive-text;
-  }
-}
-
-// Border effect
-#experience, #voluntary-experience, #education {
-  @media screen {
-    table {
-      margin-left: .6rem;
-    }
-
-    td {
-      @media (min-width: 526px) {
-        border-bottom: 1rem solid $background-color;
-      }
-    }
-
-    td:first-child {
-      padding-left: 1rem;
-      position: relative;
-
-      // left side bars
-      &::before {
-        content: '';
-        position: absolute;
-        left: 0;
-        width: 0;
-        border-left: 1px solid $accent-color;
-        transition: all .2s ease-out;
-        top: 0;
-        height: 100%;
-
-        .no-touch & { // don't animate on touch devices
-          height: 0;
-          top: 50%;
-        }
-      }
-    }
-
-    tr:hover {
-      td:first-child {
-        &::before {
-          top: 0;
-          height: 100%;
-        }
-      }
-    }
-
-    // Narrow layout for phone
-    @media (max-width: 525px) {
-      table, tr, td {
-        display: block;
-      }
-
-      tr {
-        border-left: 1px solid $accent-color;
-        padding-left: 1rem;
-        margin-bottom: 1rem;
-      }
-
-      td:first-child {
-        border: none;
-        width: 100%;
-        padding-left: 0;
-
-        &::before {
-          display: none;
-        }
-      }
-    }
-  }
-}
-
-#interests {
+#skills {
   #lists-wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
     margin: 16px 0;
+
+    // Adjust for three columns on wider screens
+    @media (min-width: 900px) { // Arbitrary breakpoint for 3 columns
+      grid-template-columns: repeat(3, 1fr);
+    }
+    @media (max-width: 899px) and (min-width: $mobile) { // Adjust for 2 columns
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @media (max-width: $mobile - 1) { // Single column on small screens
+      grid-template-columns: 1fr;
+    }
   }
 
   ul {
     margin: 0;
-    width: 50%;
     padding: 0 1rem;
 
-    @media (max-width: 700px) {
-      width: 100%;
-      padding: 0 1rem;
-      &:nth-child(2n) {
-        margin-left: 0;
+    li {
+      list-style: none;
+
+      &:before {
+        content: '\25CF';
+        position: relative;
+        left: -1rem;
       }
     }
+  }
+}
+
+
+#interests {
+  #lists-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 16px 0;
+    gap: 1rem;
+
+    @media (max-width: $mobile) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  ul {
+    margin: 0;
+    padding: 0 1rem;
 
     li {
       list-style: none;
@@ -421,7 +390,8 @@ a {
 
   // Header row layout for print
   .header-row {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr; // Using grid for print header too
     justify-content: space-between;
   }
 
@@ -432,7 +402,7 @@ a {
   #contact {
     font-size: 0.7em;
 
-    table {
+    .grid-contact {
       float: right;
     }
   }
@@ -477,35 +447,24 @@ a {
     display: none;
   }
 
-  // Table spacing
-  #experience, #voluntary-experience, #education {
-    table {
-      border-collapse: separate;
-      border-spacing: 0 0.6rem;
-    }
+  // Grid styling for print
+  .grid-container {
+    display: grid;
+    grid-template-columns: 1fr; // Single column for print
+  }
 
-    td {
-      padding-bottom: 0.5rem;
-    }
-
-    td:first-child {
-      border-left: 1px solid $accent-color !important;
-      padding-left: 0.8rem;
-    }
-
-    tr:hover td:first-child::before {
-      display: block;
-    }
+  .item-row {
+    display: grid;
+    grid-template-columns: 160px 1fr; // Two columns for print
+    grid-row-gap: 0.6rem; // Matches old border-spacing
+    margin-left: 0; // Adjust margin for print
+    border-left: 1px solid $accent-color !important; // Add border back
+    padding-left: 0.8rem; // Add padding back
+    break-inside: avoid;
   }
 
   // Page break controls - minimize orphan breaks
   #abstract, #education, #interests, #references {
-    break-inside: avoid;
-  }
-
-  #experience table tr,
-  #voluntary-experience table tr,
-  #education table tr {
     break-inside: avoid;
   }
 
